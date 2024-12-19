@@ -40,15 +40,15 @@ Publications
 **<u>Jinrui Han</u>**, Zhen Chen, Di Zhou and Ershun Pan <br /> 
 **[Engineering Applications of Artificial Intelligence]** Under review
 
-[Unsupervised motion-based anomaly detection with graph attention networks for industrial robots labeling]
+[Unsupervised motion-based anomaly detection with graph attention networks for industrial robots labeling]<br /> 
 **<u>Jinrui Han</u>**, Zhen Chen, Di Zhou and Ershun Pan <br /> 
 **[Engineering Applications of Artificial Intelligence]** Under review
 
-[Dynamic Reliability Assessment for Motion Stability of Industrial Robot Based on High-Order Response Moments]
+[Dynamic Reliability Assessment for Motion Stability of Industrial Robot Based on High-Order Response Moments]<br /> 
 Di Zhou, **<u>Jinrui Han</u>**, Zhen Chen and Ershun Pan <br /> 
 **[Measurement]** Under review
 
-[Dynamic Reliability Evaluation Considering the Stochastic Evolving Process Based on Extreme Characteristics of System Responses]
+[Dynamic Reliability Evaluation Considering the Stochastic Evolving Process Based on Extreme Characteristics of System Responses]<br /> 
 Di Zhou, Zhen Chen, Zhaoxiang Chen, **<u>Jinrui Han</u>**, and Ershun Pan <br /> 
 **[Reliability Engineering and System Safety]** Under review
 
