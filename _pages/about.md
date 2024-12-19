@@ -36,7 +36,7 @@ Publications
 **<u>Jinrui Han</u>**, Zhen Chen, Di Zhou and Ershun Pan <br /> 
 **[IEEE Transactions on Reliability]** Under review
 
-[Continual anomaly detection and classification for industrial robot applications using hybrid multivariate graphical modeling and orthogonal-enhanced class-incremental learning]
+[Continual anomaly detection and classification for industrial robot applications using hybrid multivariate graphical modeling and orthogonal-enhanced class-incremental learning]<br /> 
 **<u>Jinrui Han</u>**, Zhen Chen, Di Zhou and Ershun Pan <br /> 
 **[Engineering Applications of Artificial Intelligence]** Under review
 
