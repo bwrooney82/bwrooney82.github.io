@@ -9,6 +9,16 @@ redirect_from:
 
 I am currently a 2nd-year graduate student at [Department of Industrial Engineering](https://ieem.sjtu.edu.cn/), [SJTU](https://en.sjtu.edu.cn/), co-supervised by [Prof. Ershun Pan](https://me.sjtu.edu.cn/teacher_directory1/panershun.html) and [Prof. Zhen Chen](https://me.sjtu.edu.cn/teacher_directory1/chenzhen.html). I recieved BEng degree from the same department in 2023 along with a minor in Finance.
 
+Education
+======
+**Shanghai Jiao Tong University**  2023-now
+M.E. in  Industrial Engineering GPA(87/100)<br />
+
+**Shanghai Jiao Tong University**  2019-2023<br />
+B.E. in  Industrial Engineering  GPA(88/100) <br />
+Minor in Finance 
+
+
 Research interests
 ======
 My current research interests include industrial condition monitoring, deep learning models, and anomaly detection in Cyber-physical Systems.
