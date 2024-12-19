@@ -42,3 +42,7 @@ Grand prize, Shanghai Engineering Management Innovation Competition, SJTU, 2024<
 Grand prize, National Industrial Engineering Innovation Competition, SJTU, 2024<br />
 Third prize, China Graduate Engineering Management Case Competition, SJTU, 2024<br />
 Third prize, National Industrial Engineering Innovation Competition, SJTU, 2023<br />
+
+Extracurriculum
+------
+Sports：Shanghai Sports Meeting Men's Football 2nd
