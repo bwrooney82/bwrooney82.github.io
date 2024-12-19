@@ -32,6 +32,26 @@ News
 
 Publications
 ======
+[Online unsupervised condition monitoring for machine-level motors using a generic feature learning method]<br />
+**<u>Jinrui Han</u>**, Zhen Chen, Di Zhou and Ershun Pan <br /> 
+**[IEEE Transactions on Reliability]** Under review
+
+[Continual anomaly detection and classification for industrial robot applications using hybrid multivariate graphical modeling and orthogonal-enhanced class-incremental learning]
+**<u>Jinrui Han</u>**, Zhen Chen, Di Zhou and Ershun Pan <br /> 
+**[Engineering Applications of Artificial Intelligence]** Under review
+
+[Unsupervised motion-based anomaly detection with graph attention networks for industrial robots labeling]
+**<u>Jinrui Han</u>**, Zhen Chen, Di Zhou and Ershun Pan <br /> 
+**[Engineering Applications of Artificial Intelligence]** Under review
+
+[Dynamic Reliability Assessment for Motion Stability of Industrial Robot Based on High-Order Response Moments]
+Di Zhou, **<u>Jinrui Han</u>**, Zhen Chen and Ershun Pan <br /> 
+**[Measurement]** Under review
+
+[Dynamic Reliability Evaluation Considering the Stochastic Evolving Process Based on Extreme Characteristics of System Responses]
+Di Zhou, Zhen Chen, Zhaoxiang Chen, **<u>Jinrui Han</u>**, and Ershun Pan <br /> 
+**[Reliability Engineering and System Safety]** Under review
+
 [Unsupervised motor incipient fault detection using lightweight network and orthogonal low-rank embedding](https://beta.iopscience.iop.org/article/10.1088/1742-6596/2853/1/012072)<br />
 **<u>Jinrui Han</u>**, Zhen Chen and Ershun Pan <br /> 
 **[MEIE2024]** The Seventh International Conference on Mechanical, Electric and Industrial Engineering
