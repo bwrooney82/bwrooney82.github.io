@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a graduate student at [Department of Industrial Engineering](https://ieem.sjtu.edu.cn/), [SJTU](https://en.sjtu.edu.cn/), co-supervised by [Prof. Ershun Pan](https://me.sjtu.edu.cn/teacher_directory1/panershun.html) and [Prof. Zhen Chen](https://me.sjtu.edu.cn/teacher_directory1/chenzhen.html). I recieved BEng degree from the same department in 2023 along with a minor in Finance.
+I am currently a 2nd-year graduate student at [Department of Industrial Engineering](https://ieem.sjtu.edu.cn/), [SJTU](https://en.sjtu.edu.cn/), co-supervised by [Prof. Ershun Pan](https://me.sjtu.edu.cn/teacher_directory1/panershun.html) and [Prof. Zhen Chen](https://me.sjtu.edu.cn/teacher_directory1/chenzhen.html). I recieved BEng degree from the same department in 2023 along with a minor in Finance.
 
 Research interests
 ======
-My current research interests include intelligent IoT condition monitoring, deep learning models, and anomaly detection in Cyber-physical Systems.
+My current research interests include industrial condition monitoring, deep learning models, and anomaly detection in Cyber-physical Systems.
 
 News
 ======
@@ -30,4 +30,5 @@ Awards
 ------
 Grand prize, Shanghai Engineering Management Innovation Competition, SJTU, 2024<br />
 Grand prize, National Industrial Engineering Innovation Competition, SJTU, 2024<br />
-Third prize, China Graduate Engineering Management Case Competit
+Third prize, China Graduate Engineering Management Case Competition, SJTU, 2024<br />
+Third prize, National Industrial Engineering Innovation Competition, SJTU, 2023<br />
