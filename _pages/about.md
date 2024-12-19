@@ -11,7 +11,7 @@ I am currently a 2nd-year graduate student at [Department of Industrial Engineer
 
 Education
 ======
-**Shanghai Jiao Tong University**  2023-now
+**Shanghai Jiao Tong University**  2023-now<br />
 M.E. in  Industrial Engineering GPA(87/100)<br />
 
 **Shanghai Jiao Tong University**  2019-2023<br />
