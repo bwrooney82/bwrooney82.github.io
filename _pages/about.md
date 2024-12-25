@@ -21,7 +21,7 @@ Minor in Finance
 
 Research interests
 ======
-My current research interests include industrial condition monitoring, deep learning models, and anomaly detection in Cyber-physical Systems.
+My current research interests include intelligent state monitoring of industrial robots and industrial anomaly detection. In the future, I hope to have the opportunity to further explore research in intelligent robots, embodied intelligence, and other interdisciplinary fields of AI.
 
 News
 ======
@@ -33,7 +33,7 @@ News
 Publications
 ======
 [Online unsupervised condition monitoring for machine-level motors using a generic feature learning method]<br />
-**<u>Jinrui Han</u>**, Zhen Chen, Di Zhou and Ershun Pan <br /> 
+Zhen Chen, **<u>Jinrui Han</u>**, Bing Hu, Di Zhou and Ershun Pan <br /> 
 **[IEEE Transactions on Reliability]** Under review
 
 [Continual anomaly detection and classification for industrial robot applications using hybrid multivariate graphical modeling and orthogonal-enhanced class-incremental learning]<br /> 
@@ -62,6 +62,11 @@ Grand prize, Shanghai Engineering Management Innovation Competition, SJTU, 2024<
 Grand prize, National Industrial Engineering Innovation Competition, SJTU, 2024<br />
 Third prize, China Graduate Engineering Management Case Competition, SJTU, 2024<br />
 Third prize, National Industrial Engineering Innovation Competition, SJTU, 2023<br />
+
+Skills
+------
+Python, Pytorch, Pandas, SSH, Git, GitHub, ROS.
+English: CET6, Speaking(Fluent)
 
 Extracurriculum
 ------
