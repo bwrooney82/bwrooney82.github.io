@@ -65,7 +65,7 @@ Third prize, National Industrial Engineering Innovation Competition, SJTU, 2023<
 
 Skills
 ------
-Python, Pytorch, Pandas, SSH, Git, GitHub, ROS.
+Python, Pytorch, Pandas, SSH, Git, GitHub, ROS <br />
 English: CET6, Speaking(Fluent)
 
 Extracurriculum
