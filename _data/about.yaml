@@ -1,42 +1,45 @@
 # basic information
-name: khang nguyen
-profile-pic: assets/img/new_pic.jpg
-pronunciation: /kʰæŋ/
-pronunciation-emoji: 🎧
+name: Jinrui Han (韓金睿)
+profile-pic: assets/img/jinrui.png
+# pronunciation: /kʰæŋ/
+# pronunciation-emoji: 🎧
 
 # emoji indicator
-emoji: 🍀
-desc-emoji: four-leaf clover
+emoji: 👾
+desc-emoji: 
 
 # social links
-scholar: https://scholar.google.com/citations?user=Z6_5ZTEAAAAJ
-researchgate: https://www.researchgate.net/profile/Khang-Nguyen-133
-github: https://github.com/mkhangg
-youtube: https://www.youtube.com/@_m.khangg_
-resume: assets/doc/Resume_KhangNguyen.pdf
-projects: show            # delete "show" or leave it blank to hide this icon
-location: https://maps.app.goo.gl/ChzvajkDzdL4RxEJ7
-codepen: 
-orcid: https://orcid.org/0000-0003-3471-5533
-contact: show            # delete "show" or leave it blank to hide this icon
+scholar: https://scholar.google.com.pr/citations?user=mJ7tn3MAAAAJ&hl=zh-CN
+# researchgate: https://www.researchgate.net/profile/Jinrui-Han?ev=hdr_xprf
+github: https://github.com/bwrooney82
+wechat: assets/img/wechat.png
+# resume: assets/doc/Resume_KhangNguyen.pdf
+projects:             # delete "show" or leave it blank to hide this icon
+# location: https://maps.app.goo.gl/8JnwKmgiywhEs8C96
+# codepen: 
+# orcid: https://orcid.org/0000-0003-3471-5533
+# contact: show            # delete "show" or leave it blank to hide this icon
 
 # information for contact card
-dept: cse @ uta
-lab: learn lab @ erb 128
-email: khang.nguyen@uta.edu
-phone: +1 (470) 815-5812
-website: https://mkhangg.com/
-web-dns: mkhangg.com
+dept: me @ sjtu
+lab: 
+email: jrhan82@sjtu.edu.cn
+phone: +86 182 7314 4065
+website: 
+web-dns: 
 
 # about me
-first-paragraph: I am a research assistant at the <hightlight>Learning and Adaptive Robotics (LEARN) Lab</hightlight> affiliated with the <a href="https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse" target="_blank" rel="noopener">University of Texas at Arlington</a> under the guidance of <a href="https://www.uta.edu/academics/faculty/profile?username=huber" target="_blank" rel="noopener">Dr. Manfred Huber</a>, building upon the research I initiated during my undergraduate studies here. (◕▿◕)
-second-paragraph: I grew up in <a href="https://en.wikipedia.org/wiki/Saigon" target="_blank" rel="noopener">Saigon, Vietnam</a>, and was fortunate to spend my most memorable time at the <a href="https://en.wikipedia.org/wiki/VNU-HCM_High_School_for_the_Gifted" target="_blank" rel="noopener">VNU-HCM High School for the Gifted</a> (informatics program of 2020) and previously <a href="https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_%C4%90%E1%BA%A1i_Ngh%C4%A9a_High_School_for_the_Gifted" target="_blank" rel="noopener">TĐN Secondary School for the Gifted</a> (mathematics program of 2017) with very good friends - too many to name them here, where we played football (soccer) on concrete fields together afterschool.
-research-introduction: I do research in robotics, mainly focusing on applying <code>cognitive architectures to robotic grasping</code> to enable robots with a closely similar human grasping capability. Just imagine the robot enters the kitchen, finds a banana, grasps without crushing it, and brings it back to you.
+first-paragraph: I am a last-year master student majoring Mechanical Engineering at  <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">Shanghai Jiao Tong University (SJTU)</a>. Before that, I earned a Bachelor's degree from SJTU in 2023.
+second-paragraph: Currently I am a research intern at <a href="https://www.chinatelecom.com.cn/" target="_blank" rel="noopener">Institute of Artificial Intelligence (TeleAI), China Telecom</a>, co-worked with <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Dr.Chenjia Bai</a> to advance research in humanoid whole-body control. 
+research-introduction: I do research in robotics, mainly focusing on applying <code>reinforcement learning</code> to endow robots with human-like behaviors.
 
 research-interests:
 
-  - field: Robotic Perception
-    subfields: semantic scene understanding, perception for grasping
+  - field: Humanoid Locomotion
+    subfields: reinforcement learning, whole-body control, motion imitation
   
-  - field: Robotic Manipulation
-    subfields: learning to grasp, manipulative visual-motor skills
+  - field: Loco-Manipulation
+    subfields: learning to humanoid-object interaction skills
+  
+  - field: Email
+    subfields: You can contact me via email for any inquiries or collaborations:jrhan82@sjtu.edu.cn or wechat:Bw_Rooney

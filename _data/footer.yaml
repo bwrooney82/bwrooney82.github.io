@@ -1,7 +1,7 @@
 logos:
 
-  - logo_affiliation: assets/img/uta_cse_logo.png
-    logo_alt_text: "UTA CSE"
+  - logo_affiliation: assets/img/sjtu.png
+    logo_alt_text: "SJTU"
     
-  - logo_affiliation: assets/img/uta_logo.png
-    logo_alt_text: "UTA"
+  - logo_affiliation: assets/img/teleai.png
+    logo_alt_text: "TeleAI"
