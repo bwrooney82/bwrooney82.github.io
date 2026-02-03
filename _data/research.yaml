@@ -6,11 +6,57 @@ categories:
 
 projects:
 
+  - title: Humanoid Skateboarding System via Physics-Aware Whole-Body Control
+    system-name: HUSKY
+    gif: assets/img/husky.gif
+    conference: In Submission
+    conference-web: 
+    status:
+    authors: <u>Jinrui Han*</u>, Dewei Wang*, Chenyun Zhang, Xinzhe Liu, Ping Luo, Chenjia Bai†, Xuelong Li
+    pdf: https://husky-humanoid.github.io/static/Skate_Arxiv.pdf
+    code: https://husky-humanoid.github.io/
+    demo: https://husky-humanoid.github.io/
+    abstract-less: While current humanoid whole-body control frameworks predominantly rely on the static environment assumptions, addressing tasks characterized by high dynamism and complex interactions presents a formidable challenge. In this paper, we address humanoid skateboarding, a highly challenging task requiring stable dynamic maneuvering on an underactuated wheeled platform. 
+    abstract-more: This integrated system is governed by non-holonomic constraints and tightly coupled human-object interactions. Successfully executing this task requires simultaneous mastery of hybrid contact dynamics and robust balance control on a mechanically coupled, dynamically unstable skateboard. To overcome the aforementioned challenges, we propose HUSKY, a learning-based framework that integrates humanoid-skateboard system modeling and physics-aware whole-body control. We first model the coupling relationship between board tilt and truck steering angles, enabling a principled analysis of system dynamics. Building upon this, HUSKY leverages Adversarial Motion Priors (AMP) to learn human-like pushing motions and employs a physics-guided, heading-oriented strategy for lean-to-steer behaviors. Moreover, a trajectory-guided mechanism ensures smooth and stable transitions between pushing and steering. Experimental results on the Unitree G1 humanoid platform demonstrate that our framework enables stable and agile maneuvering on a skateboard in real-world scenarios.
+    tag: humanoid wbc
+    category: humanoid wbc
+
+  - title: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Controll
+    system-name: TextOp
+    gif: assets/img/textop.png
+    conference: In Submission
+    conference-web: 
+    status:
+    authors: Weiji Xie, Jiakun Zheng, <u>Jinrui Han</u>, Jiyuan Shi, Weinan Zhang, Chenjia Bai†, Xuelong Li 
+    pdf: https://text-op.github.io/
+    code: https://github.com/TeleHuman/TextOp
+    demo: https://text-op.github.io/
+    abstract-less: Recent advances in humanoid whole-body motion tracking have enabled the execution of diverse and highly coordinated motions on real hardware. However, existing controllers are commonly driven either by predefined motion trajectories, which offer limited flexibility when user intent changes, or by continuous human teleoperation, which requires constant human involvement and limits autonomy.
+    abstract-more: This work addresses the problem of how to drive a universal humanoid controller in a real-time and interactive manner. We present TextOp, a real-time text-driven humanoid motion generation and control framework that supports streaming language commands and on-the-fly instruction modification during execution. extOp adopts a two-level architecture in which a high-level autoregressive motion diffusion model continuously generates short-horizon kinematic trajectories conditioned on the current text input, while a low-level motion tracking policy executes these trajectories on a physical humanoid robot. By bridging interactive motion generation with robust whole-body control, TextOp unlocks free-form intent expression and enables smooth transitions across multiple challenging behaviors such as dancing and jumping, within a single continuous motion execution. Extensive real-robot experiments and offline evaluations demonstrate instant responsiveness, smooth whole-body motion, and precise control.
+    tag: humanoid wbc
+    category: humanoid wbc
+
+  - title: Learning Soccer Skills for Humanoid Robots A Progressive Perception-Action Framework
+    system-name: 
+    gif: assets/img/soccer.gif
+    conference: In Submission
+    conference-web: 
+    status:
+    authors: Jipeng Kong, Xinzhe Liu, Yuhang Lin, <u>Jinrui Han</u>, Sören Schwertfeger, Chenjia Bai†, Xuelong Li 
+    pdf: 
+    code: 
+    demo: 
+    abstract-less: Soccer presents a significant challenge for humanoid robots, demanding tightly integrated perception-action capabilities for tasks like perception-guided kicking and whole-body balance control. Existing approaches suffer from inter-module instability in modular pipelines or conflicting training objectives in end-to-end frameworks. We propose Perception-Action integrated Decision-making (PAiD)
+    abstract-more: a progressive architecture that decomposes soccer skill acquisition into three stages motion-skill acquisition via human motion tracking, lightweight perception-action integration for positional generalization, and physics-aware sim-to-real transfer. This staged decomposition establishes stable foundational skills, avoids reward conflicts during perception integration, and minimizes sim-to-real gaps. Experiments on the Unitree G1 demonstrate high-fidelity human-like kicking with robust performance under diverse conditions—including static or rolling balls, various positions, and disturbances—while maintaining consistent execution across indoor and outdoor scenarios. Our divide-and-conquer strategy advances robust humanoid soccer capabilities and offers a scalable framework for complex embodied skill acquisition.
+    tag: humanoid wbc
+    category: humanoid wbc
+
+
   - title: Learning Versatile Motion Skills for Humanoid Whole-Body Control
     system-name: KungfuBot2
     gif: assets/img/kungfubot2.gif
-    conference: In submission 
-    conference-web:
+    conference: ICRA 2026 (Vienna, Austria)
+    conference-web: https://2026.ieee-icra.org/
     status:
     authors: <u>Jinrui Han</u>, Weiji Xie, Jiakun Zheng, Jiyuan Shi, Weinan Zhang, Ting Xiao, Chenjia Bai†
     pdf: https://arxiv.org/abs/2509.16638

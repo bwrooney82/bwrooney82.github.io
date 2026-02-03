@@ -1,5 +1,5 @@
 # basic information
-name: Jinrui Han (韓金睿)
+name: Jinrui Han (韩金睿)
 profile-pic: assets/img/jinrui.png
 # pronunciation: /kʰæŋ/
 # pronunciation-emoji: 🎧
@@ -29,7 +29,7 @@ website:
 web-dns: 
 
 # about me
-first-paragraph: I am a last-year master student majoring Mechanical Engineering at  <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">Shanghai Jiao Tong University (SJTU)</a>. Before that, I earned a Bachelor's degree from SJTU in 2023.
+first-paragraph: Hi! I am an incoming 26Fall PhD student & last-year master student at  <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">Shanghai Jiao Tong University (SJTU)</a>. Before that, I earned a Bachelor's degree from SJTU in 2023.
 second-paragraph: Currently I am a research intern at <a href="https://www.chinatelecom.com.cn/" target="_blank" rel="noopener">Institute of Artificial Intelligence (TeleAI), China Telecom</a>, co-worked with <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Dr.Chenjia Bai</a> to advance research in humanoid whole-body control. 
 research-introduction: I do research in robotics, mainly focusing on applying <code>reinforcement learning</code> to endow robots with human-like behaviors.
 

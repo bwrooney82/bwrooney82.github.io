@@ -9,7 +9,7 @@
         <meta name="description" content="website"/>
         <meta name="author" content="khang nguyen"/>
         <title>Jinrui Han | MEng @ SJTU</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/icon-ai.png"/>
+        <link rel="icon" type="image/x-icon" href="assets/img/icon.png"/>
         
         <!-- Font Awesome icons -->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
@@ -47,7 +47,7 @@
         
         <!-- Assitant icon saying about theme changes -->
         <div class="popup-icon-container" id="popupIconContainer" draggable="true">
-            <div class="icon"><img src="assets/img/icon-ai.png" width="65" height="65"></div>
+            <div class="icon"><img src="assets/img/icon.png" width="65" height="65"></div>
             <div class="speech-balloon"></div>
         </div>
         
@@ -64,8 +64,8 @@
             </a>
             <ul>
                 <li><p onclick="scrollToTopDiv('html')"><span class="emoji">🏡</span> <span class="text">home</span></p></li>
-                <li><p onclick="scrollToTopDiv('#updates')"><span class="emoji">💬</span> <span class="text">updates</span></p></li>
-                <li><p onclick="scrollToTopDiv('#research')"><span class="emoji">📄</span> <span class="text">publications</span></p></li>
+                <!-- <li><p onclick="scrollToTopDiv('#updates')"><span class="emoji">💬</span> <span class="text">updates</span></p></li> -->
+                <li><p onclick="scrollToTopDiv('#research')"><span class="emoji">📄</span> <span class="text">projects</span></p></li>
                 <!-- <li><p onclick="scrollToTopDiv('#outreach')"><span class="emoji">🧩</span> <span class="text">outreach</span></p></li> -->
                 <!-- <li><p onclick="scrollToTopDiv('#resources')"><span class="emoji">⛏️</span> <span class="text">resources</span></p></li> -->
                 <!-- <li><p onclick="scrollToTopDiv('#gallery')"><span class="emoji">🖼️</span> <span class="text">gallery</span></p></li> -->
@@ -81,7 +81,7 @@
         <div class="ring-container">
             <div class="ring">
                 <div class="hollow-ring">
-                    <img class="profile-image" src="assets/img/jinrui.png" alt="Jinrui Han (韓金睿)" />
+                    <img class="profile-image" src="assets/img/jinrui.png" alt="Jinrui Han (韩金睿)" />
                      
                         <div class="emoji-indicator">
                             👾 <span class="hover-text">  </span> 
@@ -131,7 +131,7 @@
                 </div>
                 <div class="back">
                     <div class="contact-info-card">
-                        <p class="card-name">Jinrui Han (韓金睿)</p>
+                        <p class="card-name">Jinrui Han (韩金睿)</p>
                         <a href="" target="_blank" rel="noopener" class="card-website-link" title="Website"></a>
                     </div>
                 </div>
@@ -142,12 +142,12 @@
 
     <div class="col-lg-10 col-md-8">
         <h2>
-            Jinrui Han (韓金睿) 
+            Jinrui Han (韩金睿) 
             
             
         </h2>
         <p></p>
-        I am a last-year master student majoring Mechanical Engineering at  <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">Shanghai Jiao Tong University (SJTU)</a>. Before that, I earned a Bachelor's degree from SJTU in 2023.
+        Hi! I am an incoming 26Fall PhD student &amp; last-year master student at  <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">Shanghai Jiao Tong University (SJTU)</a>. Before that, I earned a Bachelor's degree from SJTU in 2023.
         <p></p>
         Currently I am a research intern at <a href="https://www.chinatelecom.com.cn/" target="_blank" rel="noopener">Institute of Artificial Intelligence (TeleAI), China Telecom</a>, co-worked with <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Dr.Chenjia Bai</a> to advance research in humanoid whole-body control.      
         <p></p>
@@ -170,8 +170,7 @@
 
 <!-- Updates section -->
 
-<hr />
-
+<!-- <hr>
 <div class="row" id="updates">
     <div class="col">
         <h2 clss="mb-5">💬 updates</h2>
@@ -179,7 +178,7 @@
         <div class="owl-carousel owl-theme">
             
                 <div class="news-card">
-    <img src="" class="w-full rounded-lg" />
+    <img src="" class="w-full rounded-lg">
     <div class="news-desc">Our paper <hightlight>KungfuBot</hightlight> is accepted by NeurIPS 2025.</div>
     <div class="news-time">September 2025</div>
 </div>
@@ -187,7 +186,7 @@
         </div>
         <p></p>
     </div>
-</div>
+</div> -->
 
 <!-- Research section -->
 
@@ -195,7 +194,7 @@
 
 <div class="row" id="research">
     <div class="col">
-        <h2 clss="mb-5">📄 publications</h2>
+        <h2 clss="mb-5">📄 projects</h2>
         <p></p>
         <div id="filters-project">
             <button class="filter-button active" data-filter="*">all</button>
@@ -209,13 +208,109 @@
                 <div class="project" data-filter="humanoid wbc">
     <div class="row mb-4">
         <div class="col-sm-4">
+            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/husky.gif" />
+        </div>
+        <div class="col-sm-8">
+             <b><i>HUSKY</i>:</b> 
+            <b>Humanoid Skateboarding System via Physics-Aware Whole-Body Control</b>
+            <br />
+            <i><a href="" target="_blank" rel="noopener">In Submission</a></i> 
+            
+            <br />
+            <u>Jinrui Han*</u>, Dewei Wang*, Chenyun Zhang, Xinzhe Liu, Ping Luo, Chenjia Bai†, Xuelong Li
+            <br />
+             <a href="https://husky-humanoid.github.io/static/Skate_Arxiv.pdf" target="_blank" rel="noopener">[PDF]</a> 
+             | <a href="https://husky-humanoid.github.io/" target="_blank" rel="noopener">[CODE]</a> 
+             | <a href="https://husky-humanoid.github.io/" target="_blank" rel="noopener">[DEMO]</a> 
+            
+            
+            
+            <br />
+            <u><b><i>Abstract</i></b>:</u> 
+            While current humanoid whole-body control frameworks predominantly rely on the static environment assumptions, addressing tasks characterized by high dynamism and complex interactions presents a formidable challenge. In this paper, we address humanoid skateboarding, a highly challenging task requiring stable dynamic maneuvering on an underactuated wheeled platform.
+            <span class="collapse" id="humanoid wbc">
+                This integrated system is governed by non-holonomic constraints and tightly coupled human-object interactions. Successfully executing this task requires simultaneous mastery of hybrid contact dynamics and robust balance control on a mechanically coupled, dynamically unstable skateboard. To overcome the aforementioned challenges, we propose HUSKY, a learning-based framework that integrates humanoid-skateboard system modeling and physics-aware whole-body control. We first model the coupling relationship between board tilt and truck steering angles, enabling a principled analysis of system dynamics. Building upon this, HUSKY leverages Adversarial Motion Priors (AMP) to learn human-like pushing motions and employs a physics-guided, heading-oriented strategy for lean-to-steer behaviors. Moreover, a trajectory-guided mechanism ensures smooth and stable transitions between pushing and steering. Experimental results on the Unitree G1 humanoid platform demonstrate that our framework enables stable and agile maneuvering on a skateboard in real-world scenarios.
+            </span> 
+            <span> <a href="#humanoid wbc" data-toggle="collapse" onclick="toggleText(this)" id="link-humanoid wbc">... See More</a></span>
+        </div>                       
+    </div>
+</div>
+
+            
+                <div class="project" data-filter="humanoid wbc">
+    <div class="row mb-4">
+        <div class="col-sm-4">
+            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/textop.png" />
+        </div>
+        <div class="col-sm-8">
+             <b><i>TextOp</i>:</b> 
+            <b>Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Controll</b>
+            <br />
+            <i><a href="" target="_blank" rel="noopener">In Submission</a></i> 
+            
+            <br />
+            Weiji Xie, Jiakun Zheng, <u>Jinrui Han</u>, Jiyuan Shi, Weinan Zhang, Chenjia Bai†, Xuelong Li
+            <br />
+             <a href="https://text-op.github.io/" target="_blank" rel="noopener">[PDF]</a> 
+             | <a href="https://github.com/TeleHuman/TextOp" target="_blank" rel="noopener">[CODE]</a> 
+             | <a href="https://text-op.github.io/" target="_blank" rel="noopener">[DEMO]</a> 
+            
+            
+            
+            <br />
+            <u><b><i>Abstract</i></b>:</u> 
+            Recent advances in humanoid whole-body motion tracking have enabled the execution of diverse and highly coordinated motions on real hardware. However, existing controllers are commonly driven either by predefined motion trajectories, which offer limited flexibility when user intent changes, or by continuous human teleoperation, which requires constant human involvement and limits autonomy.
+            <span class="collapse" id="humanoid wbc">
+                This work addresses the problem of how to drive a universal humanoid controller in a real-time and interactive manner. We present TextOp, a real-time text-driven humanoid motion generation and control framework that supports streaming language commands and on-the-fly instruction modification during execution. extOp adopts a two-level architecture in which a high-level autoregressive motion diffusion model continuously generates short-horizon kinematic trajectories conditioned on the current text input, while a low-level motion tracking policy executes these trajectories on a physical humanoid robot. By bridging interactive motion generation with robust whole-body control, TextOp unlocks free-form intent expression and enables smooth transitions across multiple challenging behaviors such as dancing and jumping, within a single continuous motion execution. Extensive real-robot experiments and offline evaluations demonstrate instant responsiveness, smooth whole-body motion, and precise control.
+            </span> 
+            <span> <a href="#humanoid wbc" data-toggle="collapse" onclick="toggleText(this)" id="link-humanoid wbc">... See More</a></span>
+        </div>                       
+    </div>
+</div>
+
+            
+                <div class="project" data-filter="humanoid wbc">
+    <div class="row mb-4">
+        <div class="col-sm-4">
+            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/soccer.gif" />
+        </div>
+        <div class="col-sm-8">
+            
+            <b>Learning Soccer Skills for Humanoid Robots A Progressive Perception-Action Framework</b>
+            <br />
+            <i><a href="" target="_blank" rel="noopener">In Submission</a></i> 
+            
+            <br />
+            Jipeng Kong, Xinzhe Liu, Yuhang Lin, <u>Jinrui Han</u>, Sören Schwertfeger, Chenjia Bai†, Xuelong Li
+            <br />
+             <a href="">[PDF]</a> 
+            
+            
+            
+            
+            
+            <br />
+            <u><b><i>Abstract</i></b>:</u> 
+            Soccer presents a significant challenge for humanoid robots, demanding tightly integrated perception-action capabilities for tasks like perception-guided kicking and whole-body balance control. Existing approaches suffer from inter-module instability in modular pipelines or conflicting training objectives in end-to-end frameworks. We propose Perception-Action integrated Decision-making (PAiD)
+            <span class="collapse" id="humanoid wbc">
+                a progressive architecture that decomposes soccer skill acquisition into three stages motion-skill acquisition via human motion tracking, lightweight perception-action integration for positional generalization, and physics-aware sim-to-real transfer. This staged decomposition establishes stable foundational skills, avoids reward conflicts during perception integration, and minimizes sim-to-real gaps. Experiments on the Unitree G1 demonstrate high-fidelity human-like kicking with robust performance under diverse conditions—including static or rolling balls, various positions, and disturbances—while maintaining consistent execution across indoor and outdoor scenarios. Our divide-and-conquer strategy advances robust humanoid soccer capabilities and offers a scalable framework for complex embodied skill acquisition.
+            </span> 
+            <span> <a href="#humanoid wbc" data-toggle="collapse" onclick="toggleText(this)" id="link-humanoid wbc">... See More</a></span>
+        </div>                       
+    </div>
+</div>
+
+            
+                <div class="project" data-filter="humanoid wbc">
+    <div class="row mb-4">
+        <div class="col-sm-4">
             <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/kungfubot2.gif" />
         </div>
         <div class="col-sm-8">
              <b><i>KungfuBot2</i>:</b> 
             <b>Learning Versatile Motion Skills for Humanoid Whole-Body Control</b>
             <br />
-            <i><a href="" target="_blank" rel="noopener">In submission</a></i> 
+            <i><a href="https://2026.ieee-icra.org/" target="_blank" rel="noopener">ICRA 2026 (Vienna, Austria)</a></i> 
             
             <br />
             <u>Jinrui Han</u>, Weiji Xie, Jiakun Zheng, Jiyuan Shi, Weinan Zhang, Ting Xiao, Chenjia Bai†
