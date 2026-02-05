@@ -1,6 +1,6 @@
 # headers and icon 
-title: Jinrui Han
-info: MEng @ SJTU
+title: Jinrui
+# info: 
 icon-pic: assets/img/icon.png
 
 # exclude these items when generated website in _site/index.html
