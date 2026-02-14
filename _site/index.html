@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content="website"/>
         <meta name="author" content="khang nguyen"/>
-        <title>Jinrui | </title>
+        <title>Jinrui</title>
         <link rel="icon" type="image/x-icon" href="assets/img/icon.png"/>
         
         <!-- Font Awesome icons -->
@@ -84,7 +84,7 @@
                     <img class="profile-image" src="assets/img/jinrui.png" alt="Jinrui Han (韩金睿)" />
                      
                         <div class="emoji-indicator">
-                            👾 <span class="hover-text">  </span> 
+                            🤖 <span class="hover-text">  </span> 
                         </div> 
                     
                 </div>
@@ -147,9 +147,11 @@
             
         </h2>
         <p></p>
-        Hi! I am an incoming 26Fall PhD student &amp; last-year master student at  <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">Shanghai Jiao Tong University (SJTU)</a>. Before that, I earned a Bachelor's degree from SJTU in 2023.
+        Hi! I am an incoming 26Fall PhD student at <a href="https://www.hku.hk/" target="_blank" rel="noopener">The University of Hong Kong (HKU)</a> &amp; last-year master student at <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">Shanghai Jiao Tong University (SJTU)</a>. Before that, I earned a Bachelor's degree from <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">SJTU</a> in 2023.
         <p></p>
-        Currently I am a research intern at <a href="https://www.chinatelecom.com.cn/" target="_blank" rel="noopener">Institute of Artificial Intelligence (TeleAI), China Telecom</a>, co-worked with <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Dr.Chenjia Bai</a> to advance research in humanoid whole-body control.      
+        Currently I am a research intern at <a href="https://www.chinatelecom.com.cn/" target="_blank" rel="noopener">Institute of Artificial Intelligence (TeleAI), China Telecom</a>, co-worked with <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Dr.Chenjia Bai</a> to advance research in humanoid whole-body control.
+        <p></p>
+        You can contact me for any discussions or collaborations <a href="mailto:jrhan82@sjtu.edu.cn">email</a> or <a href="assets/img/wechat.png">wechat</a>.
         <p></p>
         <div class="codebox">
             I do research in robotics, mainly focusing on applying <code>reinforcement learning</code> to endow robots with human-like behaviors.
@@ -159,9 +161,6 @@
 <br />
             
                 <b>Loco-Manipulation:</b> learning to humanoid-object interaction skills 
-<br />
-            
-                <b>Email:</b> You can contact me via email for any inquiries or collaborations:jrhan82@sjtu.edu.cn or wechat:Bw_Rooney 
 <br />
             
         </div>
@@ -226,12 +225,9 @@
             
             
             <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            While current humanoid whole-body control frameworks predominantly rely on the static environment assumptions, addressing tasks characterized by high dynamism and complex interactions presents a formidable challenge. In this paper, we address humanoid skateboarding, a highly challenging task requiring stable dynamic maneuvering on an underactuated wheeled platform.
-            <span class="collapse" id="humanoid wbc">
-                This integrated system is governed by non-holonomic constraints and tightly coupled human-object interactions. Successfully executing this task requires simultaneous mastery of hybrid contact dynamics and robust balance control on a mechanically coupled, dynamically unstable skateboard. To overcome the aforementioned challenges, we propose HUSKY, a learning-based framework that integrates humanoid-skateboard system modeling and physics-aware whole-body control. We first model the coupling relationship between board tilt and truck steering angles, enabling a principled analysis of system dynamics. Building upon this, HUSKY leverages Adversarial Motion Priors (AMP) to learn human-like pushing motions and employs a physics-guided, heading-oriented strategy for lean-to-steer behaviors. Moreover, a trajectory-guided mechanism ensures smooth and stable transitions between pushing and steering. Experimental results on the Unitree G1 humanoid platform demonstrate that our framework enables stable and agile maneuvering on a skateboard in real-world scenarios.
-            </span> 
-            <span> <a href="#humanoid wbc" data-toggle="collapse" onclick="toggleText(this)" id="link-humanoid wbc">... See More</a></span>
+            <br />
+            <u><b>TL;DR</b></u>:
+            A reinforcement learning–based whole-body control framework for stable and agile humanoid skateboarding.
         </div>                       
     </div>
 </div>
@@ -240,7 +236,7 @@
                 <div class="project" data-filter="humanoid wbc">
     <div class="row mb-4">
         <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/textop.png" />
+            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/textop.gif" />
         </div>
         <div class="col-sm-8">
              <b><i>TextOp</i>:</b> 
@@ -251,19 +247,16 @@
             <br />
             Weiji Xie, Jiakun Zheng, <u>Jinrui Han</u>, Jiyuan Shi, Weinan Zhang, Chenjia Bai†, Xuelong Li
             <br />
-             <a href="https://text-op.github.io/" target="_blank" rel="noopener">[PDF]</a> 
+             <a href="https://arxiv.org/abs/2602.07439" target="_blank" rel="noopener">[PDF]</a> 
              | <a href="https://github.com/TeleHuman/TextOp" target="_blank" rel="noopener">[CODE]</a> 
              | <a href="https://text-op.github.io/" target="_blank" rel="noopener">[DEMO]</a> 
             
             
             
             <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            Recent advances in humanoid whole-body motion tracking have enabled the execution of diverse and highly coordinated motions on real hardware. However, existing controllers are commonly driven either by predefined motion trajectories, which offer limited flexibility when user intent changes, or by continuous human teleoperation, which requires constant human involvement and limits autonomy.
-            <span class="collapse" id="humanoid wbc">
-                This work addresses the problem of how to drive a universal humanoid controller in a real-time and interactive manner. We present TextOp, a real-time text-driven humanoid motion generation and control framework that supports streaming language commands and on-the-fly instruction modification during execution. extOp adopts a two-level architecture in which a high-level autoregressive motion diffusion model continuously generates short-horizon kinematic trajectories conditioned on the current text input, while a low-level motion tracking policy executes these trajectories on a physical humanoid robot. By bridging interactive motion generation with robust whole-body control, TextOp unlocks free-form intent expression and enables smooth transitions across multiple challenging behaviors such as dancing and jumping, within a single continuous motion execution. Extensive real-robot experiments and offline evaluations demonstrate instant responsiveness, smooth whole-body motion, and precise control.
-            </span> 
-            <span> <a href="#humanoid wbc" data-toggle="collapse" onclick="toggleText(this)" id="link-humanoid wbc">... See More</a></span>
+            <br />
+            <u><b>TL;DR</b></u>:
+            A real-time interactive text-driven framework for humanoid motion generation and control that supports streaming language commands.
         </div>                       
     </div>
 </div>
@@ -283,19 +276,16 @@
             <br />
             Jipeng Kong, Xinzhe Liu, Yuhang Lin, <u>Jinrui Han</u>, Sören Schwertfeger, Chenjia Bai†, Xuelong Li
             <br />
-             <a href="">[PDF]</a> 
-            
-            
+             <a href="https://arxiv.org/abs/2602.05310" target="_blank" rel="noopener">[PDF]</a> 
+             | <a href="https://soccer-humanoid.github.io/" target="_blank" rel="noopener">[CODE]</a> 
+             | <a href="https://soccer-humanoid.github.io/" target="_blank" rel="noopener">[DEMO]</a> 
             
             
             
             <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            Soccer presents a significant challenge for humanoid robots, demanding tightly integrated perception-action capabilities for tasks like perception-guided kicking and whole-body balance control. Existing approaches suffer from inter-module instability in modular pipelines or conflicting training objectives in end-to-end frameworks. We propose Perception-Action integrated Decision-making (PAiD)
-            <span class="collapse" id="humanoid wbc">
-                a progressive architecture that decomposes soccer skill acquisition into three stages motion-skill acquisition via human motion tracking, lightweight perception-action integration for positional generalization, and physics-aware sim-to-real transfer. This staged decomposition establishes stable foundational skills, avoids reward conflicts during perception integration, and minimizes sim-to-real gaps. Experiments on the Unitree G1 demonstrate high-fidelity human-like kicking with robust performance under diverse conditions—including static or rolling balls, various positions, and disturbances—while maintaining consistent execution across indoor and outdoor scenarios. Our divide-and-conquer strategy advances robust humanoid soccer capabilities and offers a scalable framework for complex embodied skill acquisition.
-            </span> 
-            <span> <a href="#humanoid wbc" data-toggle="collapse" onclick="toggleText(this)" id="link-humanoid wbc">... See More</a></span>
+            <br />
+            <u><b>TL;DR</b></u>:
+            A progressive perception–action framework enabling robust, human-like soccer kicking on humanoid robots.
         </div>                       
     </div>
 </div>
@@ -322,12 +312,9 @@
             
             
             <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            Learning versatile whole-body skills by tracking various human motions is a fundamental step toward general-purpose humanoid robots. This task is particularly challenging because a single policy must master a broad repertoire of motion skills while ensuring stability over long-horizon sequences. To this end, we present VMS,
-            <span class="collapse" id="humanoid wbc">
-                a unified whole-body controller that enables humanoid robots to learn diverse and dynamic behaviors within a single policy. Our framework integrates a hybrid tracking objective that balances local motion fidelity with global trajectory consistency, and an Orthogonal Mixture-of-Experts (OMoE) architecture that encourages skill specialization while enhancing generalization across motions. A segment-level tracking reward is further introduced to relax rigid step-wise matching, enhancing robustness when handling global displacements and transient inaccuracies. We validate VMS extensively in both simulation and real-world experiments, demonstrating accurate imitation of dynamic skills, stable performance over minute-long sequences, and strong generalization to unseen motions. These results highlight the potential of VMS as a scalable foundation for versatile humanoid whole-body control
-            </span> 
-            <span> <a href="#humanoid wbc" data-toggle="collapse" onclick="toggleText(this)" id="link-humanoid wbc">... See More</a></span>
+            <br />
+            <u><b>TL;DR</b></u>:
+            A unified whole-body controller that enables humanoid robots to learn diverse and dynamic behaviors within a single policy.
         </div>                       
     </div>
 </div>
@@ -354,12 +341,9 @@
              | <a href="https://www.openrobot.me/talk" target="_blank" rel="noopener">[TALK]</a> 
             
             <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            Humanoid robots are promising to acquire various skills by imitating human behaviors. However, existing algorithms are only capable of tracking smooth, low-speed human motions, even with delicate reward and curriculum design. This paper presents a physics-based humanoid control framework,
-            <span class="collapse" id="humanoid wbc">
-                aiming to master highly-dynamic human behaviors such as Kungfu and dancing through multi-steps motion processing and adaptive motion tracking. For motion processing, we design a pipeline to extract, filter out, correct, and retarget motions, while ensuring compliance with physical constraints to the maximum extent. For motion imitation, we formulate a bi-level optimization problem to dynamically adjust the tracking accuracy tolerance based on the current tracking error, creating an adaptive curriculum mechanism. We further construct an asymmetric actor-critic framework for policy training. In experiments, we train whole-body control policies to imitate a set of highly-dynamic motions. Our method achieves significantly lower tracking errors than existing approaches and is successfully deployed on the Unitree G1 robot, demonstrating stable and expressive behaviors.
-            </span> 
-            <span> <a href="#humanoid wbc" data-toggle="collapse" onclick="toggleText(this)" id="link-humanoid wbc">... See More</a></span>
+            <br />
+            <u><b>TL;DR</b></u>:
+            A physics-based humanoid control framework, aiming to master highly-dynamic human behaviors such as Kungfu and dancing.
         </div>                       
     </div>
 </div>
@@ -378,7 +362,7 @@
 <footer class="pt-2 my-md-2 pt-md-">
     <div class="row justify-content-center">
         <div class="col-7 col-md text-left align-self-center">
-            <p class="h6">© Jinrui, <span id="currentYear"></span></p>
+            <p class="h6">© Jinrui <span id="currentYear"></span></p>
             <a href="https://github.com/mkhangg/academic-website" target="_blank" rel="noopener"><b>&gt; web source @github</b></a>
         </div>
         <div class="col col-md text-right">

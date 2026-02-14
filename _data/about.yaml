@@ -5,7 +5,7 @@ profile-pic: assets/img/jinrui.png
 # pronunciation-emoji: 🎧
 
 # emoji indicator
-emoji: 👾
+emoji: 🤖
 desc-emoji: 
 
 # social links
@@ -14,7 +14,6 @@ scholar: https://scholar.google.com.pr/citations?user=mJ7tn3MAAAAJ&hl=zh-CN
 github: https://github.com/bwrooney82
 twitter: https://x.com/jinrui82
 wechat: assets/img/wechat.png
-# resume: assets/doc/Resume_KhangNguyen.pdf
 projects:             # delete "show" or leave it blank to hide this icon
 # location: https://maps.app.goo.gl/8JnwKmgiywhEs8C96
 # codepen: 
@@ -30,17 +29,17 @@ website:
 web-dns: 
 
 # about me
-first-paragraph: Hi! I am an incoming 26Fall PhD student & last-year master student at  <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">Shanghai Jiao Tong University (SJTU)</a>. Before that, I earned a Bachelor's degree from SJTU in 2023.
+first-paragraph: Hi! I am an incoming 26Fall PhD student at <a href="https://www.hku.hk/" target="_blank" rel="noopener">The University of Hong Kong (HKU)</a> & last-year master student at <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">Shanghai Jiao Tong University (SJTU)</a>. Before that, I earned a Bachelor's degree from <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">SJTU</a> in 2023.
 second-paragraph: Currently I am a research intern at <a href="https://www.chinatelecom.com.cn/" target="_blank" rel="noopener">Institute of Artificial Intelligence (TeleAI), China Telecom</a>, co-worked with <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Dr.Chenjia Bai</a> to advance research in humanoid whole-body control. 
+third-paragraph: You can contact me for any discussions or collaborations <a href="mailto:jrhan82@sjtu.edu.cn">email</a> or <a href="assets/img/wechat.png">wechat</a>.
 research-introduction: I do research in robotics, mainly focusing on applying <code>reinforcement learning</code> to endow robots with human-like behaviors.
 
 research-interests:
 
-  - field: Humanoid Locomotion
+  - field: Humanoid Locomotion  
     subfields: reinforcement learning, whole-body control, motion imitation
   
   - field: Loco-Manipulation
     subfields: learning to humanoid-object interaction skills
   
-  - field: Email
-    subfields: You can contact me via email for any inquiries or collaborations:jrhan82@sjtu.edu.cn or wechat:Bw_Rooney
+
