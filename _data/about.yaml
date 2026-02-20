@@ -29,17 +29,8 @@ website:
 web-dns: 
 
 # about me
-first-paragraph: Hi! I am an incoming 26Fall PhD student at <a href="https://www.hku.hk/" target="_blank" rel="noopener">The University of Hong Kong (HKU)</a> & last-year master student at <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">Shanghai Jiao Tong University (SJTU)</a>. Before that, I earned a Bachelor's degree from <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">SJTU</a> in 2023.
-second-paragraph: Currently I am a research intern at <a href="https://www.chinatelecom.com.cn/" target="_blank" rel="noopener">Institute of Artificial Intelligence (TeleAI), China Telecom</a>, co-worked with <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Dr.Chenjia Bai</a> to advance research in humanoid whole-body control. 
-third-paragraph: You can contact me for any discussions or collaborations <a href="mailto:jrhan82@sjtu.edu.cn">email</a> or <a href="assets/img/wechat.png">wechat</a>.
-research-introduction: I do research in robotics, mainly focusing on applying <code>reinforcement learning</code> to endow robots with human-like behaviors.
+first-paragraph: Hi! I am an incoming 26Fall PhD student at <a href="https://www.hku.hk/" target="_blank" rel="noopener">The University of Hong Kong (HKU)</a> & last-year master student at <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">Shanghai Jiao Tong University (SJTU)</a>. Before that, I earned a Bachelor's degree from <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">SJTU</a> in 2023. I am currently a research intern at the <a href="https://www.teleai.com.cn/product/AboutTeleAI_en" target="_blank" rel="noopener">Institute of Artificial Intelligence (TeleAI), China Telecom</a>, co-working with <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Dr. Chenjia Bai</a> and <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Xuelong Li</a> to advance research on humanoid whole-body control.
+third-paragraph: Feel free to contact me for any discussions or collaborations via <a href="mailto:jrhan82@sjtu.edu.cn">email</a> or <a href="assets/img/wechat.png">wechat</a> !
+research-introduction: I do research in robotics, mainly focusing on applying <code>reinforcement learning</code> to endow robots with human-like behaviors, including <code>Humanoid Locomotion</code>, <code>Whole Body Control</code>, <code>Motion Tracking</code>, <code>Humanoid-Object Interactions</code>, <code>Loco-Manipulation</code>.
 
-research-interests:
-
-  - field: Humanoid Locomotion  
-    subfields: reinforcement learning, whole-body control, motion imitation
-  
-  - field: Loco-Manipulation
-    subfields: learning to humanoid-object interaction skills
-  
 
