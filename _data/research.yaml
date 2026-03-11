@@ -13,9 +13,9 @@ projects:
     conference-web: 
     status:
     authors: <u>Jinrui Han*</u>, Dewei Wang*, Chenyun Zhang, Xinzhe Liu, Ping Luo, Chenjia Bai†, Xuelong Li†
-    pdf: https://husky-humanoid.github.io/static/Skate_Arxiv.pdf
-    code: https://husky-humanoid.github.io/
-    demo: https://husky-humanoid.github.io/
+    arxiv: https://arxiv.org/abs/2602.03205
+    code: https://github.com/TeleHuman/humanoid_skateboarding
+    project: https://husky-humanoid.github.io/
     TLDR: A reinforcement learning–based whole-body control framework for stable and agile humanoid skateboarding.
     tag: Humanoid WBC
     category: Humanoid WBC
@@ -26,10 +26,10 @@ projects:
     conference: In Submission
     conference-web: 
     status:
-    authors: Weiji Xie, Jiakun Zheng, <u>Jinrui Han</u>, Jiyuan Shi, Weinan Zhang†, Chenjia Bai†, Xuelong Li 
-    pdf: https://arxiv.org/abs/2602.07439
+    authors: Weiji Xie*, Jiakun Zheng*, <u>Jinrui Han</u>, Jiyuan Shi, Weinan Zhang†, Chenjia Bai†, Xuelong Li 
+    arxiv: https://arxiv.org/abs/2602.07439
     code: https://github.com/TeleHuman/TextOp
-    demo: https://text-op.github.io/
+    project: https://text-op.github.io/
     TLDR: A real-time interactive text-driven framework for humanoid motion generation and control that supports streaming language commands.
     tag: Humanoid WBC
     category: Humanoid WBC
@@ -40,10 +40,10 @@ projects:
     conference: In Submission
     conference-web: 
     status:
-    authors: Jipeng Kong, Xinzhe Liu, Yuhang Lin, <u>Jinrui Han</u>, Sören Schwertfeger, Chenjia Bai†, Xuelong Li† 
-    pdf: https://arxiv.org/abs/2602.05310
-    code: https://soccer-humanoid.github.io/
-    demo: https://soccer-humanoid.github.io/
+    authors: Jipeng Kong*, Xinzhe Liu*, Yuhang Lin, <u>Jinrui Han</u>, Sören Schwertfeger, Chenjia Bai†, Xuelong Li† 
+    arxiv: https://arxiv.org/abs/2602.05310
+    code: https://github.com/TeleHuman/HumanoidSoccer
+    project: https://soccer-humanoid.github.io/
     TLDR: A progressive perception–action framework enabling robust, human-like soccer kicking on humanoid robots.
     tag: Humanoid WBC
     category: Humanoid WBC
@@ -56,12 +56,9 @@ projects:
     conference-web: https://2026.ieee-icra.org/
     status:
     authors: <u>Jinrui Han</u>, Weiji Xie, Jiakun Zheng, Jiyuan Shi, Weinan Zhang, Ting Xiao, Chenjia Bai†
-    pdf: https://arxiv.org/abs/2509.16638
+    arxiv: https://arxiv.org/abs/2509.16638
     code: https://github.com/TeleHuman/PBHC
-    demo: https://kungfubot2-humanoid.github.io/
-    # slides: https://mkhangg.com/assets/slides/iros24b_slides.pdf
-    # talk: https://youtu.be/vQZMQApcTCY
-    # poster: https://mkhangg.com/assets/posters/iros24b_poster.pdf
+    project: https://kungfubot2-humanoid.github.io/
     TLDR: A unified whole-body controller that enables humanoid robots to learn diverse and dynamic behaviors within a single policy.
     tag: Humanoid WBC
     category: Humanoid WBC
@@ -73,12 +70,10 @@ projects:
     conference-web: https://neurips.cc/
     status:
     authors: Weiji Xie*, <u>Jinrui Han*</u>, Jiakun Zheng*, Huanyu Li, Xinzhe Liu, Jiyuan Shi, Weinan Zhang, Chenjia Bai†, Xuelong Li†.
-    pdf: https://arxiv.org/abs/2506.12851
+    arxiv: https://arxiv.org/abs/2506.12851
     code: https://github.com/TeleHuman/PBHC
-    demo: https://kungfu-bot.github.io/
-    # slides: https://mkhangg.com/assets/slides/iros24a_slides.pdf
+    project: https://kungfu-bot.github.io/
     talk: https://www.openrobot.me/talk
-    # poster: https://mkhangg.com/assets/posters/iros24a_poster.pdf
     TLDR: A physics-based humanoid control framework, aiming to master highly-dynamic human behaviors such as Kungfu and dancing.
     tag: Humanoid WBC
     category: Humanoid WBC
