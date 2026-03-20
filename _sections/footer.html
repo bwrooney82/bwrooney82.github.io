@@ -5,13 +5,22 @@
 <footer class="pt-2 my-md-2 pt-md-">
     <div class="row justify-content-center">
         <div class="col-7 col-md text-left align-self-center">
-            <p class="h6">© {{ site.title }} <span id="currentYear"></span></p>
+            <p class="h6">© Jinrui 2026</p>
             <a href="https://github.com/mkhangg/academic-website" target="_blank" rel="noopener"><b>> web source @github</b></a>
         </div>
         <div class="col col-md text-right">
             {% for logo in site.data.footer.logos %}
                 {% include_relative _libs/footer_widget.html %}
             {% endfor %}
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <p class="page-views-mini mb-0" title="All-time page views (third-party counter)">
+                <i class="fa fa-chart-line" aria-hidden="true"></i>
+                <span class="text-muted">Total page views:</span>
+                <span id="busuanzi_value_site_pv">…</span>
+            </p>
         </div>
     </div>
     <p></p>

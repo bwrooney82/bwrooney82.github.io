@@ -468,10 +468,30 @@ code {
 #projects {
     margin: 0px;
 }
+
+/* Compact publications / projects layout */
+.publications-inner {
+    /* max-width: 1200px; */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.0rem;
+    line-height: 1.45;
+}
+.publications-heading {
+    font-size: 1.35rem;
+}
+#filters-project.publications-filters .filter-button {
+    font-size: 0.85rem;
+    padding: 3px 6px;
+}
+
 .project {
     margin: 0px;
     padding: 20px 0;
     border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+.publications-inner .project {
+    padding: 12px 0;
 }
 .project:last-child {
     border-bottom: none;
@@ -868,6 +888,40 @@ div.desc {
     color: grey;
     padding: 0rem 1rem 0.6rem 1rem;
     font-size: 12px;
+}
+
+.news-list-item {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.news-list-date {
+    display: inline-block;
+    min-width: 5.5rem;
+    font-weight: 600;
+    margin-right: 0.35rem;
+}
+
+.misc-content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.misc-content p:last-child {
+    margin-bottom: 0;
+}
+
+.page-views-mini {
+    font-size: 0.8rem;
+    color: #6c757d;
+    letter-spacing: 0.02em;
+}
+.page-views-mini .fa-chart-line {
+    margin-right: 0.35rem;
+    opacity: 0.85;
+}
+.page-views-mini #busuanzi_value_site_pv {
+    font-weight: 600;
+    color: #495057;
+    margin-left: 0.15rem;
 }
 .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
     position: absolute;

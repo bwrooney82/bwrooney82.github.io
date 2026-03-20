@@ -3,16 +3,16 @@
 <hr>
 <div class="row" id="research">
     <div class="col">
-        <h2 clss="mb-5">📄 projects</h2>
+        <h2 class="mb-4 publications-heading">📄 projects</h2>
         <p></p>
-        <div id="filters-project">
+        <div id="filters-project" class="publications-filters">
             <button class="filter-button active" data-filter="*">all</button>
             {% for category in site.data.research.categories %}
                 <button class="filter-button" data-filter="{{ category.data-filter }}">{{ category.category-name }}</button>
             {% endfor %}
         </div>
         <p></p>
-        <div id="projects" class="isotope">
+        <div id="projects" class="isotope publications-inner">
             {% for project in site.data.research.projects %}
                 {% include_relative _libs/research_widget.html %}
             {% endfor %}

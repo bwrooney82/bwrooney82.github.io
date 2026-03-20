@@ -125,25 +125,33 @@
     </div>
 </div>
 
-<!-- Updates section -->
+<!-- News section -->
 
-<!-- <hr>
-<div class="row" id="updates">
+<hr />
+
+<div class="row" id="news">
     <div class="col">
-        <h2 clss="mb-5">💬 updates</h2>
-        <p></p>
-        <div class="owl-carousel owl-theme">
+        <h2 class="mb-3" style="font-size: 1.5rem;">📰 news</h2>
+        <ul class="list-unstyled news-list mb-0" style="font-size: 0.95rem;">
             
-                <div class="news-card">
-    <img src="" class="w-full rounded-lg">
-    <div class="news-desc">Our paper <hightlight>KungfuBot</hightlight> is accepted by NeurIPS 2025.</div>
-    <div class="news-time">September 2025</div>
-</div>
+            <li class="news-list-item mb-2"><span class="news-list-date text-muted" style="font-size: 0.92em;">[2026-03]</span> Invited talk at <a href="https://mp.weixin.qq.com/s/Oz0o2Zp_e2PTCSqnLqHLWg?poc_token=HNfOvGmjNbFC6GgZT1t7mCsOLmLIoTxCtDDiF2aW" target="_blank" rel="noopener">具身智能之心.</a></li>
             
-        </div>
+            <li class="news-list-item mb-2"><span class="news-list-date text-muted" style="font-size: 0.92em;">[2026-02]</span> Release the project and code of <a href="https://husky-humanoid.github.io/" target="_blank" rel="noopener">HUSKY</a>, <a href="https://text-op.github.io/" target="_blank" rel="noopener">TextOp</a>, <a href="https://soccer-humanoid.github.io/" target="_blank" rel="noopener">HumanoidSoccer</a>.</li>
+            
+            <li class="news-list-item mb-2"><span class="news-list-date text-muted" style="font-size: 0.92em;">[2026-01]</span> <a href="https://kungfubot2-humanoid.github.io/" target="_blank" rel="noopener">KungfuBot2</a> is accepted by <b>ICRA 2026</b>.</li>
+            
+            <li class="news-list-item mb-2"><span class="news-list-date text-muted" style="font-size: 0.92em;">[2025-10]</span> Release the project and code for <a href="https://kungfubot2-humanoid.github.io/" target="_blank" rel="noopener">KungfuBot2</a>.</li>
+            
+            <li class="news-list-item mb-2"><span class="news-list-date text-muted" style="font-size: 0.92em;">[2025-09]</span> <a href="https://kungfubot-humanoid.github.io/" target="_blank" rel="noopener">KungfuBot</a> is accepted by <b>NeurIPS 2025</b>.</li>
+            
+            <li class="news-list-item mb-2"><span class="news-list-date text-muted" style="font-size: 0.92em;">[2025-06]</span> Invited talk at <a href="https://www.shenlanxueyuan.com/open/course/286" target="_blank" rel="noopener">深蓝学院</a> and <a href="https://www.openrobot.me/talk" target="_blank" rel="noopener">OpenGRO.</a></li>
+            
+            <li class="news-list-item mb-2"><span class="news-list-date text-muted" style="font-size: 0.92em;">[2025-06]</span> Release the project and code for <a href="https://kungfubot-humanoid.github.io/" target="_blank" rel="noopener">Kungfubot</a>.</li>
+            
+        </ul>
         <p></p>
     </div>
-</div> -->
+</div>
 
 <!-- Research section -->
 
@@ -151,23 +159,23 @@
 
 <div class="row" id="research">
     <div class="col">
-        <h2 clss="mb-5">📄 projects</h2>
+        <h2 class="mb-4 publications-heading">📄 projects</h2>
         <p></p>
-        <div id="filters-project">
+        <div id="filters-project" class="publications-filters">
             <button class="filter-button active" data-filter="*">all</button>
             
                 <button class="filter-button" data-filter="humanoid whole-body-control">Humanoid WBC</button>
             
         </div>
         <p></p>
-        <div id="projects" class="isotope">
+        <div id="projects" class="isotope publications-inner">
             
                 <div class="project" data-filter="Humanoid WBC">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/husky.gif" />
+    <div class="row mb-3 align-items-start">
+        <div class="col-sm-3 col-md-3">
+            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/husky.gif" alt="" />
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-9 col-md-9">
              <b><i>HUSKY</i>:</b> 
             <b>Humanoid Skateboarding System via Physics-Aware Whole-Body Control</b>
             <br />
@@ -181,7 +189,6 @@
              | <a href="https://husky-humanoid.github.io/" target="_blank" rel="noopener">[project]</a> 
             
             <br />
-            <br />
             <u><b>TL;DR</b></u>:
             A reinforcement learning–based whole-body control framework for stable and agile humanoid skateboarding.
         </div>                       
@@ -190,11 +197,11 @@
 
             
                 <div class="project" data-filter="Humanoid WBC">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/textop.gif" />
+    <div class="row mb-3 align-items-start">
+        <div class="col-sm-3 col-md-3">
+            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/textop.gif" alt="" />
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-9 col-md-9">
              <b><i>TextOp</i>:</b> 
             <b>Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Controll</b>
             <br />
@@ -208,7 +215,6 @@
              | <a href="https://text-op.github.io/" target="_blank" rel="noopener">[project]</a> 
             
             <br />
-            <br />
             <u><b>TL;DR</b></u>:
             A real-time interactive text-driven framework for humanoid motion generation and control that supports streaming language commands.
         </div>                       
@@ -217,11 +223,11 @@
 
             
                 <div class="project" data-filter="Humanoid WBC">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/soccer.gif" />
+    <div class="row mb-3 align-items-start">
+        <div class="col-sm-3 col-md-3">
+            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/soccer.gif" alt="" />
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-9 col-md-9">
             
             <b>Learning Soccer Skills for Humanoid Robots A Progressive Perception-Action Framework</b>
             <br />
@@ -235,7 +241,6 @@
              | <a href="https://soccer-humanoid.github.io/" target="_blank" rel="noopener">[project]</a> 
             
             <br />
-            <br />
             <u><b>TL;DR</b></u>:
             A progressive perception–action framework enabling robust, human-like soccer kicking on humanoid robots.
         </div>                       
@@ -244,15 +249,15 @@
 
             
                 <div class="project" data-filter="Humanoid WBC">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/kungfubot2.gif" />
+    <div class="row mb-3 align-items-start">
+        <div class="col-sm-3 col-md-3">
+            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/kungfubot2.gif" alt="" />
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-9 col-md-9">
              <b><i>KungfuBot2</i>:</b> 
             <b>Learning Versatile Motion Skills for Humanoid Whole-Body Control</b>
             <br />
-            <i><a href="https://2026.ieee-icra.org/" target="_blank" rel="noopener">ICRA 2026 (Vienna, Austria)</a></i> 
+            <i><a href="https://2026.ieee-icra.org/" target="_blank" rel="noopener"><b>ICRA 2026</b></a></i> 
             
             <br />
             <u>Jinrui Han</u>, Weiji Xie, Jiakun Zheng, Jiyuan Shi, Weinan Zhang, Ting Xiao, Chenjia Bai†
@@ -262,7 +267,6 @@
              | <a href="https://kungfubot2-humanoid.github.io/" target="_blank" rel="noopener">[project]</a> 
             
             <br />
-            <br />
             <u><b>TL;DR</b></u>:
             A unified whole-body controller that enables humanoid robots to learn diverse and dynamic behaviors within a single policy.
         </div>                       
@@ -271,15 +275,15 @@
 
             
                 <div class="project" data-filter="Humanoid WBC">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/kungfubot.png" />
+    <div class="row mb-3 align-items-start">
+        <div class="col-sm-3 col-md-3">
+            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/kungfubot.png" alt="" />
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-9 col-md-9">
              <b><i>KungfuBot</i>:</b> 
             <b>Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills</b>
             <br />
-            <i><a href="https://neurips.cc/" target="_blank" rel="noopener">NeurIPS 2025 (San Diego, United States)</a></i> 
+            <i><a href="https://neurips.cc/" target="_blank" rel="noopener"><b>NeurIPS 2025</b></a></i> 
             
             <br />
             Weiji Xie*, <u>Jinrui Han*</u>, Jiakun Zheng*, Huanyu Li, Xinzhe Liu, Jiyuan Shi, Weinan Zhang, Chenjia Bai†, Xuelong Li†.
@@ -288,7 +292,6 @@
              | <a href="https://github.com/TeleHuman/PBHC" target="_blank" rel="noopener">[code]</a> 
              | <a href="https://kungfu-bot.github.io/" target="_blank" rel="noopener">[project]</a> 
              | <a href="https://www.openrobot.me/talk" target="_blank" rel="noopener">[talk]</a> 
-            <br />
             <br />
             <u><b>TL;DR</b></u>:
             A physics-based humanoid control framework, aiming to master highly-dynamic human behaviors such as Kungfu and dancing.
@@ -302,6 +305,21 @@
     </div>
 </div>
 
+<!-- Misc section -->
+
+<hr />
+
+<div class="row" id="misc">
+    <div class="col">
+        <h2 class="mb-3" style="font-size: 1.5rem;">💬 misc.</h2>
+        <div class="misc-content" style="font-size: 0.95rem;">
+            <p>I enjoy playing soccer and am a fan of <em>ManUtd</em>. I also play FPS games, such as <em>Apex</em> and <em>Valorant</em>. In addition, I like traveling and watching movies.</p>
+
+        </div>
+        <p></p>
+    </div>
+</div>
+
 <!-- Footer section -->
 
 <div>‎</div>
@@ -310,7 +328,7 @@
 <footer class="pt-2 my-md-2 pt-md-">
     <div class="row justify-content-center">
         <div class="col-7 col-md text-left align-self-center">
-            <p class="h6">© Jinrui <span id="currentYear"></span></p>
+            <p class="h6">© Jinrui 2026</p>
             <a href="https://github.com/mkhangg/academic-website" target="_blank" rel="noopener"><b>&gt; web source @github</b></a>
         </div>
         <div class="col col-md text-right">
@@ -319,6 +337,15 @@
             
                 <img class="mr+4" src="assets/img/teleai.png" data-canonical-src="assets/img/teleai.png" alt="TeleAI" width="60" />
             
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <p class="page-views-mini mb-0" title="All-time page views (third-party counter)">
+                <i class="fa fa-chart-line" aria-hidden="true"></i>
+                <span class="text-muted">Total page views:</span>
+                <span id="busuanzi_value_site_pv">…</span>
+            </p>
         </div>
     </div>
     <p></p>
@@ -347,6 +374,8 @@
 
 		<!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     </body>
 </html>

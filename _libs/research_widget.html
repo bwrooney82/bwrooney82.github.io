@@ -1,9 +1,9 @@
 <div class="project" data-filter="{{ project.category }}">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="{{ project.gif }}">
+    <div class="row mb-3 align-items-start">
+        <div class="col-sm-3 col-md-3">
+            <img width="100%" height="auto" class="w-full rounded-lg" src="{{ project.gif }}" alt="">
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-9 col-md-9">
             {% if project.system-name %} <b><i>{{ project.system-name }}</i>:</b> {% endif %}
             <b>{{ project.title }}</b>
             <br>
@@ -16,7 +16,6 @@
             {% if project.code %} | <a href="{{ project.code }}" target="_blank" rel="noopener">[code]</a> {% endif %}
             {% if project.project %} | <a href="{{ project.project }}" target="_blank" rel="noopener">[project]</a> {% endif %}
             {% if project.talk %} | <a href="{{ project.talk }}" target="_blank" rel="noopener">[talk]</a> {% endif %}
-            <br>
             <br>
             <u><b>TL;DR</b></u>:
             {{ project.TLDR }}
