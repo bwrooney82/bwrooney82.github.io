@@ -9,8 +9,8 @@ projects:
   - title: Humanoid Skateboarding System via Physics-Aware Whole-Body Control
     system-name: HUSKY
     gif: assets/img/husky.gif
-    conference: In Submission
-    conference-web: 
+    conference: "<b>Robotics: Science and Systems (RSS), 2026</b>"
+    conference-web: https://www.roboticsconference.org/
     status:
     authors: <u>Jinrui Han*</u>, Dewei Wang*, Chenyun Zhang, Xinzhe Liu, Ping Luo, Chenjia Bai†, Xuelong Li†
     arxiv: https://arxiv.org/abs/2602.03205
@@ -52,7 +52,7 @@ projects:
   - title: Learning Versatile Motion Skills for Humanoid Whole-Body Control
     system-name: KungfuBot2
     gif: assets/img/kungfubot2.gif
-    conference: <b>ICRA 2026</b>
+    conference: <b>International Conference on Robotics and Automation (ICRA), 2026</b>
     conference-web: https://2026.ieee-icra.org/
     status:
     authors: <u>Jinrui Han</u>, Weiji Xie, Jiakun Zheng, Jiyuan Shi, Weinan Zhang, Ting Xiao, Chenjia Bai†
@@ -66,7 +66,7 @@ projects:
   - title: Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills
     system-name: KungfuBot
     gif: assets/img/kungfubot.png
-    conference: <b>NeurIPS 2025</b> 
+    conference: <b>Conference on Neural Information Processing Systems (NeurIPS), 2025</b> 
     conference-web: https://neurips.cc/
     status:
     authors: Weiji Xie*, <u>Jinrui Han*</u>, Jiakun Zheng*, Huanyu Li, Xinzhe Liu, Jiyuan Shi, Weinan Zhang, Chenjia Bai†, Xuelong Li†.
