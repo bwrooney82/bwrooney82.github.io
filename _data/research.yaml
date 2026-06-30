@@ -10,7 +10,7 @@ projects:
     system-name: HUSKY
     gif: assets/img/husky.gif
     conference: "<b>Robotics: Science and Systems (RSS), 2026</b>"
-    conference-web: https://www.roboticsconference.org/
+    conference-web: https://roboticsconference.org/program/papersession/?session=Humanoids
     status:
     authors: <u>Jinrui Han*</u>, Dewei Wang*, Chenyun Zhang, Xinzhe Liu, Ping Luo, Chenjia Bai†, Xuelong Li†
     arxiv: https://arxiv.org/abs/2602.03205
@@ -20,7 +20,7 @@ projects:
     tag: Humanoid WBC
     category: Humanoid WBC
 
-  - title: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Controll
+  - title: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control
     system-name: TextOp
     gif: assets/img/textop.gif
     conference: In Submission
@@ -66,7 +66,7 @@ projects:
   - title: Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills
     system-name: KungfuBot
     gif: assets/img/kungfubot.png
-    conference: <b>Conference on Neural Information Processing Systems (NeurIPS), 2025</b> 
+    conference: <b>Advances in Neural Information Processing Systems (NeurIPS), 2025</b> 
     conference-web: https://neurips.cc/
     status:
     authors: Weiji Xie*, <u>Jinrui Han*</u>, Jiakun Zheng*, Huanyu Li, Xinzhe Liu, Jiyuan Shi, Weinan Zhang, Chenjia Bai†, Xuelong Li†.

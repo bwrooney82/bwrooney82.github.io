@@ -1,4 +1,6 @@
 logos:
+  - logo_affiliation: assets/img/hku.jpg
+    logo_alt_text: "HKU"
 
   - logo_affiliation: assets/img/sjtu.png
     logo_alt_text: "SJTU"
