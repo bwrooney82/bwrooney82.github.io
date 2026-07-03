@@ -72,7 +72,7 @@ projects:
     authors: Weiji Xie*, <u>Jinrui Han*</u>, Jiakun Zheng*, Huanyu Li, Xinzhe Liu, Jiyuan Shi, Weinan Zhang, Chenjia Bai†, Xuelong Li†.
     arxiv: https://arxiv.org/abs/2506.12851
     code: https://github.com/TeleHuman/PBHC
-    project: https://kungfu-bot.github.io/
+    project: https://kungfubot.github.io/
     talk: https://www.openrobot.me/talk
     TLDR: A physics-based humanoid control framework, aiming to master highly-dynamic human behaviors such as Kungfu and dancing.
     tag: Humanoid WBC
