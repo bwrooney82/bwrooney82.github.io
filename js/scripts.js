@@ -14,16 +14,19 @@ btn.on('click', function(e) {
     const speechBalloon = document.querySelector('.speech-balloon');
     const clickSound = new Audio('assets/sounds/collision_sound.wav');
     $('html, body').animate({scrollTop:0}, '300');
-    speechBalloon.innerText = 'back to top!';
-    clickSound.play();
+    if (speechBalloon) speechBalloon.innerText = 'back to top!';
+    clickSound.play().catch(function() {});
 });
 
 
-// Play pronunciation audio when the emoji is clicked
-document.getElementById('volumeEmoji').addEventListener('click', function() {
-    const pronunicationAudio = new Audio('assets/sounds/khang.mp3');
-    pronunicationAudio.play();
-});
+// Play pronunciation audio when the emoji is clicked (element is optional)
+const volumeEmojiEl = document.getElementById('volumeEmoji');
+if (volumeEmojiEl) {
+    volumeEmojiEl.addEventListener('click', function() {
+        const pronunicationAudio = new Audio('assets/sounds/khang.mp3');
+        pronunicationAudio.play();
+    });
+}
 
 
 // Toggle navigation menu bar
@@ -63,39 +66,35 @@ function scrollToTopDiv(divTag) {
 
 
 // Button for toggle theme (dark/light)
-function toggleTheme() {
+function applyTheme(theme) {
     const bodyEl = document.body;
     const buttonEl = document.querySelector('.toggle-theme-button');
+
+    bodyEl.classList.remove('light-theme', 'dark-theme');
+    bodyEl.classList.add(theme + '-theme');
+    if (buttonEl) buttonEl.innerText = theme === 'dark' ? '☀️' : '🌙';
+}
+
+function toggleTheme() {
     const speechBalloon = document.querySelector('.speech-balloon');
     const clickSound = new Audio('assets/sounds/switch_sound.wav');
+    const next = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
 
-    if (bodyEl.classList.contains('light-theme')) {
-        bodyEl.classList.remove('light-theme');
-        bodyEl.classList.add('dark-theme');
-        buttonEl.classList.remove('light-theme');
-        buttonEl.classList.add('dark-theme');
-        buttonEl.innerText = '☀️';
-        speechBalloon.innerText = 'lights turned off!';
-        clickSound.play();
-    } else {
-        bodyEl.classList.remove('dark-theme');
-        bodyEl.classList.add('light-theme');
-        buttonEl.classList.remove('dark-theme');
-        buttonEl.classList.add('light-theme');
-        buttonEl.innerText = '🌙';
-        speechBalloon.innerText = 'lights turned on!';
-        clickSound.play();
-    }
+    applyTheme(next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    if (speechBalloon) speechBalloon.innerText = next === 'dark' ? 'lights turned off!' : 'lights turned on!';
+    clickSound.play().catch(function() {});
 }
 
 
 // Handle scroll event to hide/show back-to-top and toggle theme button
 window.addEventListener('scroll', function() {
     const buttonEl = document.querySelector('.toggle-theme-button');
+    if (!buttonEl) return;
     if (window.scrollY > 0) {
         buttonEl.style.display = 'none';
     } else {
-        buttonEl.style.display = 'block';
+        buttonEl.style.display = 'flex';
     }
 });
 
@@ -119,13 +118,16 @@ function initializeOwlCarousel() {
     });
 }
 
-// Touch and mouse event listeners
+// Touch and mouse event listeners (popup icon is optional)
 let isDragging = false;
 let isMobile = 'ontouchstart' in window;
 let startEvent = isMobile ? 'touchstart' : 'mousedown';
 let moveEvent = isMobile ? 'touchmove' : 'mousemove';
 let endEvent = isMobile ? 'touchend' : 'mouseup';
+var popupIconContainer = document.querySelector('.popup-icon-container');
+var dismissalArea = document.querySelector('.dismissal-area');
 
+if (popupIconContainer && dismissalArea) {
 
 // Capture mouse down (desktop) or touch start (mobile) events
 popupIconContainer.addEventListener(startEvent, (e) => {
@@ -184,14 +186,18 @@ document.addEventListener(endEvent, (e) => {
     isDragging = false;
 });
 
+}  // end popup-icon guard
+
 
 // Hide speech balloon when scrolling down
 window.addEventListener('scroll', function() {
+    const balloon = document.querySelector('.speech-balloon');
+    if (!balloon) return;
     let scrollPosition = window.scrollY || document.documentElement.scrollTop;
     if (scrollPosition > 300) {
-        document.querySelector('.speech-balloon').classList.add('hidden');
+        balloon.classList.add('hidden');
     } else {
-        document.querySelector('.speech-balloon').classList.remove('hidden');
+        balloon.classList.remove('hidden');
     }
 });
 
@@ -207,26 +213,32 @@ function progressBar() {
 }
 
 
-// Scripts to activate/deactivate contact info card 
+// Scripts to activate/deactivate contact info card (trigger icon is optional)
 var overlaybg = document.getElementById('overlay-bg');
+var contactCardTrigger = document.getElementById('contact-card-trigger');
 
-document.getElementById('contact-card-trigger').onclick = function() {
-    overlaybg.style.display = 'flex';
-};
+if (overlaybg && contactCardTrigger) {
+    contactCardTrigger.onclick = function() {
+        overlaybg.style.display = 'flex';
+    };
 
-overlaybg.addEventListener('click', function(event) {
-    if (event.target === overlaybg) {
-        overlaybg.style.display = 'none';
-    }
-});
+    overlaybg.addEventListener('click', function(event) {
+        if (event.target === overlaybg) {
+            overlaybg.style.display = 'none';
+        }
+    });
+}
 
 
 // Play the flipping-card sound when user flips the contact info card
-document.getElementById('front_end_card').addEventListener('click', function() {
-    this.classList.toggle('flip');
-    const flipAudio = new Audio('assets/sounds/flipcard_sound.mp3');
-    flipAudio.play();
-});
+var frontEndCard = document.getElementById('front_end_card');
+if (frontEndCard) {
+    frontEndCard.addEventListener('click', function() {
+        this.classList.toggle('flip');
+        const flipAudio = new Audio('assets/sounds/flipcard_sound.mp3');
+        flipAudio.play().catch(function() {});
+    });
+}
 
 
 // Get all filter buttons and change their active status as user clicks
@@ -240,6 +252,7 @@ filterButtonsProject.forEach(function(filterButtonProject) {
             flrbtn.classList.remove('active');
         });
         this.classList.add('active');
+        if (!speechBalloon) return;
         if (this.textContent === "perception + manipulation") {
             speechBalloon.innerText = 'see RoPM projects!';
         } else {
@@ -255,6 +268,7 @@ filterButtonsGithub.forEach(function(filterButtonGithub) {
             flrbtn.classList.remove('active');
         });
         this.classList.add('active');
+        if (!speechBalloon) return;
         speechBalloon.innerText = 'see ' + this.textContent + ' repos!';
         speechBalloon.classList.remove('hidden');
     });
@@ -357,11 +371,12 @@ function updatePagerProjects() {
     }
 
     var $currentPageIndicator = $('<span class="current-page">&nbsp; page ' + currentPage + ' of ' + currentNumberPages + ' &nbsp; </span>');
-    
+
     $previous.appendTo($isotopePager);
     $currentPageIndicator.appendTo($isotopePager);
     $next.appendTo($isotopePager);
     $projects.after($isotopePager);
+    $isotopePager.toggle(currentNumberPages > 1);  // hide pager when single page
 }
 
 
@@ -414,6 +429,7 @@ function initializeIsotopeProjects() {
 document.addEventListener('DOMContentLoaded', () => {
 
     const container = document.getElementById('github-cards');
+    if (!container) return;
     const repoElements = container.querySelectorAll('div[data-url]');
 
     repoElements.forEach(repoElement => {
@@ -517,11 +533,12 @@ function updatePagerGithub() {
     }
 
     var $currentPage_1Indicator = $('<span class="current-page">&nbsp; page ' + currentPage_1 + ' of ' + currentNumberPages_1 + ' &nbsp; </span>');
-    
+
     $previous.appendTo($isotopePager);
     $currentPage_1Indicator.appendTo($isotopePager);
     $next.appendTo($isotopePager);
     $cards.after($isotopePager);
+    $isotopePager.toggle(currentNumberPages_1 > 1);  // hide pager when single page
 }
 
 
@@ -597,23 +614,24 @@ $(document).ready(function() {
 });
 
 
-// Dark/Light theme based on predefined time
+// Initial theme: URL ?theme= param > saved preference > time of day
 document.addEventListener('DOMContentLoaded', function() {
-    const buttonEl = document.querySelector('.toggle-theme-button');
     const speechBalloon = document.querySelector('.speech-balloon');
-    var currentHour = new Date().getHours();
+    var theme = null;
 
-    // Dark theme is used between 7 PM of last day
-    // to 7 AM next day. Otherwise, use light theme
-    if (currentHour > 19 || currentHour <= 7) {
-        document.body.classList.add('dark-theme');
-        buttonEl.innerText = '☀️';
-        speechBalloon.innerText = 'it\'s night, lights off!';
-    } else {
-        document.body.classList.add('light-theme');
-        buttonEl.innerText = '🌙';
-        speechBalloon.innerText = 'it\'s day, lights on!';
+    var param = new URLSearchParams(window.location.search).get('theme');
+    if (param === 'dark' || param === 'light') theme = param;
+    if (!theme) {
+        try { theme = localStorage.getItem('theme'); } catch (e) {}
     }
+    if (theme !== 'dark' && theme !== 'light') {
+        // Dark theme between 7 PM and 7 AM, otherwise light
+        var currentHour = new Date().getHours();
+        theme = (currentHour > 19 || currentHour <= 7) ? 'dark' : 'light';
+    }
+
+    applyTheme(theme);
+    if (speechBalloon) speechBalloon.innerText = theme === 'dark' ? 'lights off!' : 'lights on!';
 });
 
 

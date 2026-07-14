@@ -1,0 +1,24 @@
+<!-- Affiliations section -->
+
+<hr>
+<div class="row" id="affiliations">
+    <div class="col">
+        <h2 class="mb-3 section-heading">🎓 affiliations</h2>
+        <div class="affiliation-board">
+            {% for aff in data.affiliations.items %}
+            <div class="affiliation-card">
+                <div class="affiliation-mark">
+                    <img src="{{ aff.logo }}" alt="{{ aff.org }}" loading="lazy">
+                    {% if aff.year %}<span class="affiliation-year">{{ aff.year }}</span>{% endif %}
+                </div>
+                <div class="affiliation-copy">
+                    <div class="affiliation-title">{{ aff.title }}</div>
+                    <div class="affiliation-org">{{ aff.org }}</div>
+                    {% if aff.note %}<div class="affiliation-note">{{ aff.note }}</div>{% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <p></p>
+    </div>
+</div>

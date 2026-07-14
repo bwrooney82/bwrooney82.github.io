@@ -6,8 +6,8 @@
         <h2 clss="mb-5">💬 updates</h2>
         <p></p>
         <div class="owl-carousel owl-theme">
-            {% for update in site.data.updates.updates %}
-                {% include_relative _libs/updates_widget.html %}
+            {% for update in data.updates.updates %}
+                {% include "_libs/updates_widget.html" %}
             {% endfor %}
         </div>
         <p></p>

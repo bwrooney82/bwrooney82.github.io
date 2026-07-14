@@ -1,0 +1,21 @@
+# Affiliation cards shown in a horizontal row below the About section.
+# Each item: logo, year (badge in the corner, optional), title, org, note (optional, HTML ok).
+items:
+
+  - logo: assets/img/hku.jpg
+    year: "2026 - Now"
+    title: Ph.D. Student
+    org: MMLab, The University of Hong Kong
+    note: Advised by Prof. <a href="http://luoping.me/" target="_blank" rel="noopener">Ping Luo</a>.
+
+  - logo: assets/img/teleai.png
+    year: "2025 - Now"
+    title: Research Intern
+    org: TeleAI, China Telecom
+    note: Working with Dr. <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Chenjia Bai</a> and Prof. <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=en" target="_blank" rel="noopener">Xuelong Li</a>.
+
+  - logo: assets/img/sjtu.png
+    year: "2019 - 2026"
+    title: B.Eng. & M.Eng.
+    org: Shanghai Jiao Tong University
+    note:

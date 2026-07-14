@@ -24,16 +24,13 @@ List of updates (in terms of functionalities):
 
 ## Prerequisites
 
-* [Ruby with DevKit](https://rubyinstaller.org/downloads/) (version 3.2.2-1)
-* [Jekyll](https://jekyllrb.com/) (version 4.3.2).
+* Python 3 (macOS built-in works)
 
-After installing Ruby, Jekyll can be installed via the following command:
+Install the (pure-Python) dependencies once:
 
 ```
-gem install bundler jekyll 
+pip3 install --user -r requirements.txt
 ```
-
-Now, you can use Jekyll locally as a website (static) generator on your laptop.
 
 <!-- USAGE -->
 
@@ -61,6 +58,7 @@ When opening the code from an IDE, you should see a structure like this:
     └───styles.css              # the CSS file for colors and stuffs 
 ├───_data               
     ├───about.yaml              # data file for About section
+    ├───affiliations.yaml       # data file for Affiliations cards
     ├───footer.yaml             # data file for Footer section
     ├───gallery.yaml            # data file for Gallery section
     ├───outreach.yaml           # data file for Outreach section
@@ -68,7 +66,6 @@ When opening the code from an IDE, you should see a structure like this:
 ├───_layouts      
     └───main.html               # the HTML layout for the webpage 
 ├───_libs      
-    ├───footer_widget.html      # html file for Footer widget
     ├───gallery_widget.html     # html file for Gallery widget
     ├───outreach_widget.html    # html file for Outreach widget
     └───research_widget.html    # html file for Research widget     
@@ -78,12 +75,8 @@ When opening the code from an IDE, you should see a structure like this:
     ├───gallery.html            # html file for Gallery section
     ├───outreach.html           # html file for Outreach section
     └───research.html           # html file for Research section
-├───_site                       # all contents for deployable version here!
-    ├───assets
-    ├───js
-    ├───styles
-    └───index.html              # the generated HTML file
-├───index.md                    # markdown file that uses main.html as layout
+├───build.py                    # Python build script (replaces Jekyll)
+├───index.html                  # the generated HTML file (do not edit by hand)
 └───_config.yml                 # information for webpage title and favicon
 ```
 
@@ -122,13 +115,15 @@ However, if you can just leave anything field `blank`, it will just will not con
 
 **3. Run the webpage at localhost**
 
-After changing to your information, the website can be tested using the following command:
+After changing to your information, build and preview the website with:
 
 ```
-bundle exec jekyll server
+python3 build.py --serve
 ```
 
-You can either see the web version in the `_site/index.html` file or go to your `localhost`: [http://localhost:4000](http://localhost:4000).
+Then go to [http://localhost:4000](http://localhost:4000). The page is rebuilt automatically whenever you edit files in `_data/`, `_sections/`, `_libs/`, `_layouts/`, or `_config.yml` (refresh the browser to see changes). To just regenerate `index.html` without serving, run `python3 build.py`.
+
+Remember to commit the regenerated `index.html` together with your data changes — GitHub Pages serves it as a static file (the `.nojekyll` file disables GitHub's Jekyll build).
 
 **4. Deploy the webpage at your desired host**
 

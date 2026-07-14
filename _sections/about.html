@@ -1,28 +1,28 @@
 <!-- About section -->
 
 <div class="row mb-4">
-    <div class="col-lg-2 col-md-4">
+    <div class="col-xl-2 col-lg-3 col-md-4">
         <div class="ring-container">
             <div class="ring">
                 <div class="hollow-ring">
-                    <img class="profile-image" src="{{ site.data.about.profile-pic }}" alt="{{ site.data.about.name }}">
+                    <img class="profile-image" src="{{ data.about.profile_pic }}" alt="{{ data.about.name }}">
                 </div>
             </div>
         </div>
         <hr>
         <div class="social-icons">
-            {% if site.data.about.scholar %} <a class="social-icon" href="{{ site.data.about.scholar }}" target="_blank" rel="noopener" title="Google Scholar"><i class="fa fa-graduation-cap" style="font-size: 35px; color: #4285f4"></i></a> {% endif %}
-            {% if site.data.about.researchgate %} <a class="social-icon" href="{{ site.data.about.researchgate }}" target="_blank" rel="noopener" title="ResearchGate"><i class="fab fa-researchgate" style="font-size: 35px; color: #00D0BB"></i></a> {% endif %}
-            {% if site.data.about.github %} <a class="social-icon" href="{{ site.data.about.github }}" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" style="font-size: 35px; color: #171515"></i></a> {% endif %}
-            {% if site.data.about.twitter %} <a class="social-icon" href="{{ site.data.about.twitter }}" target="_blank" rel="noopener" title="X"><svg style="width: 35px; height: 35px; fill: #000000;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a> {% endif %}            {% if site.data.about.wechat %} <a class="social-icon" href="{{ site.data.about.wechat }}" target="_blank" rel="noopener" title="WeChat"><i class="fab fa-weixin" style="font-size: 35px; color: #07C160"></i></a> {% endif %}
-            {% if site.data.about.resume %} <a class="social-icon" href="{{ site.data.about.resume }}" target="_blank" rel="noopener" title="Resume"><i class="fas fa-file-alt" style="font-size: 35px; color: #bd5d38"></i></a> {% endif %}
+            {% if data.about.scholar %} <a class="social-icon" href="{{ data.about.scholar }}" target="_blank" rel="noopener" title="Google Scholar"><i class="fa fa-graduation-cap" style="font-size: 35px; color: #4285f4"></i></a> {% endif %}
+            {% if data.about.researchgate %} <a class="social-icon" href="{{ data.about.researchgate }}" target="_blank" rel="noopener" title="ResearchGate"><i class="fab fa-researchgate" style="font-size: 35px; color: #00D0BB"></i></a> {% endif %}
+            {% if data.about.github %} <a class="social-icon" href="{{ data.about.github }}" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" style="font-size: 35px; color: #171515"></i></a> {% endif %}
+            {% if data.about.twitter %} <a class="social-icon" href="{{ data.about.twitter }}" target="_blank" rel="noopener" title="X"><svg style="width: 35px; height: 35px; fill: #000000;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a> {% endif %}            {% if data.about.wechat %} <a class="social-icon" href="{{ data.about.wechat }}" target="_blank" rel="noopener" title="WeChat"><i class="fab fa-weixin" style="font-size: 35px; color: #07C160"></i></a> {% endif %}
+            {% if data.about.resume %} <a class="social-icon" href="{{ data.about.resume }}" target="_blank" rel="noopener" title="Resume"><i class="fas fa-file-alt" style="font-size: 35px; color: #bd5d38"></i></a> {% endif %}
         </div>
         <div class="social-icons">
-            {% if site.data.about.codepen %} <a class="social-icon" href="{{ site.data.about.codepen }}" target="_blank" rel="noopener" title="CodePen"><i class="fab fa-codepen" style="font-size: 35px; color: #000000"></i></a> {% endif %}
-            {% if site.data.about.orcid %} <a class="social-icon" href="{{ site.data.about.orcid }}" target="_blank" rel="noopener" title="ORCID"><i class="fab fa-orcid" style="font-size: 35px; color: #a6ce39"></i></a> {% endif %}
-            {% if site.data.about.projects %} <a class="social-icon" onclick="scrollToTopDiv('#research');" title="Projects"><i class="fa fa-shapes" style="font-size: 35px; color: #e8828c"></i></a> {% endif %}
-            {% if site.data.about.location %} <a class="social-icon" href="{{ site.data.about.location }}" target="_blank" rel="noopener" title="Location"><i class="fa fa-map-marker-alt" style="font-size: 35px; color: #635050"></i></a> {% endif %}
-            {% if site.data.about.contact %} <a class="social-icon" id="contact-card-trigger" title="Contact Info"><i class="fa fa-id-card" style="font-size: 35px; color: #cbbb5f"></i></a> {% endif %}
+            {% if data.about.codepen %} <a class="social-icon" href="{{ data.about.codepen }}" target="_blank" rel="noopener" title="CodePen"><i class="fab fa-codepen" style="font-size: 35px; color: #000000"></i></a> {% endif %}
+            {% if data.about.orcid %} <a class="social-icon" href="{{ data.about.orcid }}" target="_blank" rel="noopener" title="ORCID"><i class="fab fa-orcid" style="font-size: 35px; color: #a6ce39"></i></a> {% endif %}
+            {% if data.about.projects %} <a class="social-icon" onclick="scrollToTopDiv('#research');" title="Projects"><i class="fa fa-shapes" style="font-size: 35px; color: #e8828c"></i></a> {% endif %}
+            {% if data.about.location %} <a class="social-icon" href="{{ data.about.location }}" target="_blank" rel="noopener" title="Location"><i class="fa fa-map-marker-alt" style="font-size: 35px; color: #635050"></i></a> {% endif %}
+            {% if data.about.contact %} <a class="social-icon" id="contact-card-trigger" title="Contact Info"><i class="fa fa-id-card" style="font-size: 35px; color: #cbbb5f"></i></a> {% endif %}
         </div>
         <p></p>
     </div>
@@ -36,10 +36,10 @@
                     <div class="contact-info-card">
                         <div class="code-line"><span class="line-number">1</span><span class="code-content"><span class="keyword">class</span> <span class="namespace">ContactInformationCard</span>: </span></div>
                         <div class="code-line"><span class="line-number">2</span><span class="code-content">  <span class="keyword">def</span> <span class="function">__init__</span>(<span class="self">self</span>):</span></div>
-                        <div class="code-line"><span class="line-number">3</span><span class="code-content">    <span class="self">self</span>.<span class="self">dept</span>  = <span class="string">"{{ site.data.about.dept }}"</span> </span></div>
-                        <div class="code-line"><span class="line-number">4</span><span class="code-content">    <span class="self">self</span>.<span class="self">lab</span>   = <span class="string">"{{ site.data.about.lab }}"</span> </span></div>
-                        <div class="code-line"><span class="line-number">5</span><span class="code-content">    <span class="self">self</span>.<span class="self">email</span> = <span class="string">"{{ site.data.about.email }}"</span> </span></div>
-                        <div class="code-line"><span class="line-number">6</span><span class="code-content">    <span class="self">self</span>.<span class="self">phone</span> = <span class="string">"{{ site.data.about.phone }}"</span> </span></div>
+                        <div class="code-line"><span class="line-number">3</span><span class="code-content">    <span class="self">self</span>.<span class="self">dept</span>  = <span class="string">"{{ data.about.dept }}"</span> </span></div>
+                        <div class="code-line"><span class="line-number">4</span><span class="code-content">    <span class="self">self</span>.<span class="self">lab</span>   = <span class="string">"{{ data.about.lab }}"</span> </span></div>
+                        <div class="code-line"><span class="line-number">5</span><span class="code-content">    <span class="self">self</span>.<span class="self">email</span> = <span class="string">"{{ data.about.email }}"</span> </span></div>
+                        <div class="code-line"><span class="line-number">6</span><span class="code-content">    <span class="self">self</span>.<span class="self">phone</span> = <span class="string">"{{ data.about.phone }}"</span> </span></div>
                         <div class="code-line"><span class="line-number">7</span><span class="code-content"></span></div>
                         <div class="code-line"><span class="line-number">8</span><span class="code-content">  <span class="keyword">def</span> <span class="function">flipCard</span>(<span class="self">self</span>):</span></div>
                         <div class="code-line"><span class="line-number">9</span><span class="code-content">    <span class="function">print</span>(<span class="string">"tap on the card to flip."</span>)</span></div>
@@ -50,8 +50,8 @@
                 </div>
                 <div class="back">
                     <div class="contact-info-card">
-                        <p class="card-name">{{ site.data.about.name }}</p>
-                        <a href="{{ site.data.about.website }}" target="_blank" rel="noopener" class="card-website-link" title="Website">{{ site.data.about.web-dns }}</a>
+                        <p class="card-name">{{ data.about.name }}</p>
+                        <a href="{{ data.about.website }}" target="_blank" rel="noopener" class="card-website-link" title="Website">{{ data.about.web_dns }}</a>
                     </div>
                 </div>
 
@@ -59,24 +59,24 @@
         </div>
     </div>
 
-    <div class="col-lg-10 col-md-8">
+    <div class="col-xl-10 col-lg-9 col-md-8">
         <h2>
-            {{ site.data.about.name }} 
-            {% if site.data.about.pronunciation %} <span class="text-primary"> {{ site.data.about.pronunciation }} </span> {% endif %}
-            {% if site.data.about.pronunciation-emoji %} <span id="volumeEmoji" role="button"> {{ site.data.about.pronunciation-emoji }} </span> {% endif %}
+            {{ data.about.name }} 
+            {% if data.about.pronunciation %} <span class="text-primary"> {{ data.about.pronunciation }} </span> {% endif %}
+            {% if data.about.pronunciation_emoji %} <span id="volumeEmoji" role="button"> {{ data.about.pronunciation_emoji }} </span> {% endif %}
         </h2>
         <p></p>
-        {{ site.data.about.first-paragraph }}
+        {{ data.about.first_paragraph }}
         <p></p>
-        {{ site.data.about.second-paragraph }}
+        {{ data.about.second_paragraph }}
         <p></p>
-        {{ site.data.about.third-paragraph }}
+        {{ data.about.third_paragraph }}
         <p></p>
         <div class="codebox">
-            {{ site.data.about.research-introduction }}
+            {{ data.about.research_introduction }}
             <!-- <p></p> 
-            {% for interest in site.data.about.research-interests %}
-                {% include_relative _libs/about_widget.html %}
+            {% for interest in data.about.research_interests %}
+                {% include "_libs/about_widget.html" %}
             {% endfor %} -->
         </div>
     </div>

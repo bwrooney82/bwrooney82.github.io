@@ -1,21 +1,21 @@
 <div class="row mb-4">
     <div class="col-sm-4">
-        <img width="100%" height="auto" class="w-full rounded-lg" src="{{ mini-project.gif }}">
+        <img width="100%" height="auto" class="w-full rounded-lg" src="{{ mini_project.gif }}">
     </div>
     <div class="col-sm-8">
-        {% if mini-project.system-name %} <b><i>{{ mini-project.system-name }}</i>:</b> {% endif %}
-        <b>{{ mini-project.title }}</b>
+        {% if mini_project.system_name %} <b><i>{{ mini_project.system_name }}</i>:</b> {% endif %}
+        <b>{{ mini_project.title }}</b>
         <br>
-        <i><a href="{{ mini-project.event-web }}" target="_blank" rel="noopener">{{ mini-project.event }}</a></i>
+        <i><a href="{{ mini_project.event_web }}" target="_blank" rel="noopener">{{ mini_project.event }}</a></i>
         <br>
-        {{ mini-project.team }}
+        {{ mini_project.team }}
         <br>
-        {% if mini-project.post %} <a href="{{ mini-project.post }}" target="_blank" rel="noopener">[POST]</a> {% else %} <a href="">[POST]</a> {% endif %}
-        {% if mini-project.code %} | <a href="{{ mini-project.code }}" target="_blank" rel="noopener">[CODE]</a> {% endif %}
-        {% if mini-project.demo %} | <a href="{{ mini-project.demo }}" target="_blank" rel="noopener">[DEMO]</a> {% endif %}
+        {% if mini_project.post %} <a href="{{ mini_project.post }}" target="_blank" rel="noopener">[POST]</a> {% else %} <a href="">[POST]</a> {% endif %}
+        {% if mini_project.code %} | <a href="{{ mini_project.code }}" target="_blank" rel="noopener">[CODE]</a> {% endif %}
+        {% if mini_project.demo %} | <a href="{{ mini_project.demo }}" target="_blank" rel="noopener">[DEMO]</a> {% endif %}
         <br>
-        <u><b><i>Description</i></b>:</u> {{ mini-project.description }}
+        <u><b><i>Description</i></b>:</u> {{ mini_project.description }}
         <br>
-        {% if mini-project.prize %} <u><b><i>Prize</i></b>:</u> {{ mini-project.prize }} {% endif %}
+        {% if mini_project.prize %} <u><b><i>Prize</i></b>:</u> {{ mini_project.prize }} {% endif %}
     </div>
 </div>

@@ -1,10 +1,4 @@
-# headers and icon 
+# headers and icon
 title: Jinrui
-# info: 
+# info:
 icon-pic: assets/img/icon.png
-
-# exclude these items when generated website in _site/index.html
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md

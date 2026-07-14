@@ -1,7 +1,10 @@
 categories:
 
-  - data-filter: humanoid whole-body-control
+  - data-filter: Humanoid WBC
     category-name: Humanoid WBC
+
+  - data-filter: Humanoid-Object Interaction
+    category-name: Humanoid-Object Interaction
 
 
 projects:
@@ -17,8 +20,8 @@ projects:
     code: https://github.com/TeleHuman/humanoid_skateboarding
     project: https://husky-humanoid.github.io/
     TLDR: A reinforcement learning–based whole-body control framework for stable and agile humanoid skateboarding.
-    tag: Humanoid WBC
-    category: Humanoid WBC
+    tag: Humanoid-Object Interaction
+    category: Humanoid-Object Interaction
 
   - title: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control
     system-name: TextOp
@@ -45,8 +48,8 @@ projects:
     code: https://github.com/TeleHuman/HumanoidSoccer
     project: https://soccer-humanoid.github.io/
     TLDR: A progressive perception–action framework enabling robust, human-like soccer kicking on humanoid robots.
-    tag: Humanoid WBC
-    category: Humanoid WBC
+    tag: Humanoid-Object Interaction
+    category: Humanoid-Object Interaction
 
 
   - title: Learning Versatile Motion Skills for Humanoid Whole-Body Control

@@ -7,14 +7,14 @@
         <p></p>
         <div id="filters-project" class="publications-filters">
             <button class="filter-button active" data-filter="*">all</button>
-            {% for category in site.data.research.categories %}
-                <button class="filter-button" data-filter="{{ category.data-filter }}">{{ category.category-name }}</button>
+            {% for category in data.research.categories %}
+                <button class="filter-button" data-filter="{{ category.data_filter }}">{{ category.category_name }}</button>
             {% endfor %}
         </div>
         <p></p>
         <div id="projects" class="isotope publications-inner">
-            {% for project in site.data.research.projects %}
-                {% include_relative _libs/research_widget.html %}
+            {% for project in data.research.projects %}
+                {% include "_libs/research_widget.html" %}
             {% endfor %}
         </div>
         <p></p>

@@ -1,24 +1,26 @@
 <div class="project" data-filter="{{ project.category }}">
-    <div class="row mb-3 align-items-start">
-        <div class="col-sm-3 col-md-3">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="{{ project.gif }}" alt="">
+    <div class="row mb-3 align-items-center">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-thumb">
+                <img src="{{ project.gif }}" alt="{{ project.title }}">
+            </div>
         </div>
-        <div class="col-sm-9 col-md-9">
-            {% if project.system-name %} <b><i>{{ project.system-name }}</i>:</b> {% endif %}
-            <b>{{ project.title }}</b>
-            <br>
-            <i><a href="{{ project.conference-web }}" target="_blank" rel="noopener">{{ project.conference }}</a></i> 
-            {% if project.status %} <b style = "color: #e74d3c">[{{ project.status }}]</b> {% endif %}
-            <br>
-            {{ project.authors }}
-            <br>
-            {% if project.arxiv %} <a href="{{ project.arxiv }}" target="_blank" rel="noopener">[arxiv]</a> {% else %} <a href="">[ARXIV]</a> {% endif %}
-            {% if project.code %} | <a href="{{ project.code }}" target="_blank" rel="noopener">[code]</a> {% endif %}
-            {% if project.project %} | <a href="{{ project.project }}" target="_blank" rel="noopener">[project]</a> {% endif %}
-            {% if project.talk %} | <a href="{{ project.talk }}" target="_blank" rel="noopener">[talk]</a> {% endif %}
-            <br>
-            <u><b>TL;DR</b></u>:
-            {{ project.TLDR }}
-        </div>                       
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                {% if project.system_name %}<span class="project-system-name">{{ project.system_name }}</span>: {% endif %}{{ project.title }}
+            </div>
+            <div class="project-venue">
+                {% if project.conference_web %}<a href="{{ project.conference_web }}" target="_blank" rel="noopener">{{ project.conference }}</a>{% else %}{{ project.conference }}{% endif %}
+                {% if project.status %}<span class="project-status">{{ project.status }}</span>{% endif %}
+            </div>
+            <div class="project-authors">{{ project.authors }}</div>
+            <div class="project-links">
+                {% if project.arxiv %}<a class="project-link" href="{{ project.arxiv }}" target="_blank" rel="noopener">arXiv</a>{% endif %}
+                {% if project.code %}<a class="project-link" href="{{ project.code }}" target="_blank" rel="noopener">code</a>{% endif %}
+                {% if project.project %}<a class="project-link" href="{{ project.project }}" target="_blank" rel="noopener">project</a>{% endif %}
+                {% if project.talk %}<a class="project-link" href="{{ project.talk }}" target="_blank" rel="noopener">talk</a>{% endif %}
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — {{ project.TLDR }}</div>
+        </div>
     </div>
 </div>

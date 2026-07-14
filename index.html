@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <!-- Metadata -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="website"/>
+        <meta name="author" content="khang nguyen"/>
+        <title>Jinrui</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/icon.png"/>
+        
+        <!-- Font Awesome icons -->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+		
+        <!-- Google fonts-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+        <!-- Core theme CSS -->
+        <link href="styles/styles.css?v=20260714f" rel="stylesheet"/>
+
+    </head>
+
+    <body>
+
+        <!-- Moving particles -->
+        <canvas id="canvas"></canvas>
+
+        <!-- Progress bar on top -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Back to top button -->
+        <a id="back-to-top-button"></a>
+
+        <!-- Dark/light theme toggle button -->
+        <div class="toggle-theme-button" onclick="toggleTheme()" title="Toggle theme" role="button">🌙</div>
+
+        <!-- Content -->
+        <div class="container" style="padding-top: 3rem;">
+            <!-- About section -->
+
+<div class="row mb-4">
+    <div class="col-xl-2 col-lg-3 col-md-4">
+        <div class="ring-container">
+            <div class="ring">
+                <div class="hollow-ring">
+                    <img class="profile-image" src="assets/img/jinrui.png" alt="Jinrui Han「韩金睿」">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="social-icons">
+             <a class="social-icon" href="https://scholar.google.com.pr/citations?user=mJ7tn3MAAAAJ&hl=zh-CN" target="_blank" rel="noopener" title="Google Scholar"><i class="fa fa-graduation-cap" style="font-size: 35px; color: #4285f4"></i></a> 
+            
+             <a class="social-icon" href="https://github.com/bwrooney82" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" style="font-size: 35px; color: #171515"></i></a> 
+             <a class="social-icon" href="https://x.com/jinrui82" target="_blank" rel="noopener" title="X"><svg style="width: 35px; height: 35px; fill: #000000;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>              <a class="social-icon" href="assets/img/wechat.png" target="_blank" rel="noopener" title="WeChat"><i class="fab fa-weixin" style="font-size: 35px; color: #07C160"></i></a> 
+            
+        </div>
+        <div class="social-icons">
+            
+            
+            
+            
+            
+        </div>
+        <p></p>
+    </div>
+
+    <!-- Inspired by Thanh Tran -- https://codepen.io/thanhrossi/pen/pvOEzq -->
+    <!-- Re-written, redesigned, and integrated (from HTML (Pug) and CSS (Less) to pure HTML and CSS) -->
+    <div class="contact-card-overlay" id="overlay-bg">
+        <div class="information_card">
+            <div id="front_end_card">
+                <div class="front">
+                    <div class="contact-info-card">
+                        <div class="code-line"><span class="line-number">1</span><span class="code-content"><span class="keyword">class</span> <span class="namespace">ContactInformationCard</span>: </span></div>
+                        <div class="code-line"><span class="line-number">2</span><span class="code-content">  <span class="keyword">def</span> <span class="function">__init__</span>(<span class="self">self</span>):</span></div>
+                        <div class="code-line"><span class="line-number">3</span><span class="code-content">    <span class="self">self</span>.<span class="self">dept</span>  = <span class="string">"me @ sjtu"</span> </span></div>
+                        <div class="code-line"><span class="line-number">4</span><span class="code-content">    <span class="self">self</span>.<span class="self">lab</span>   = <span class="string">""</span> </span></div>
+                        <div class="code-line"><span class="line-number">5</span><span class="code-content">    <span class="self">self</span>.<span class="self">email</span> = <span class="string">"jrhan82@sjtu.edu.cn"</span> </span></div>
+                        <div class="code-line"><span class="line-number">6</span><span class="code-content">    <span class="self">self</span>.<span class="self">phone</span> = <span class="string">"+86 182 7314 4065"</span> </span></div>
+                        <div class="code-line"><span class="line-number">7</span><span class="code-content"></span></div>
+                        <div class="code-line"><span class="line-number">8</span><span class="code-content">  <span class="keyword">def</span> <span class="function">flipCard</span>(<span class="self">self</span>):</span></div>
+                        <div class="code-line"><span class="line-number">9</span><span class="code-content">    <span class="function">print</span>(<span class="string">"tap on the card to flip."</span>)</span></div>
+                        <div class="code-line"><span class="line-number">10</span><span class="code-content"></span></div>
+                        <div class="code-line"><span class="line-number">11</span><span class="code-content">  <span class="keyword">def</span> <span class="function">closeCard</span>(<span class="self">self</span>):</span></div>
+                        <div class="code-line"><span class="line-number">12</span><span class="code-content">    <span class="function">print</span>(<span class="string">"tap outside to close it."</span>)</span></div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="contact-info-card">
+                        <p class="card-name">Jinrui Han「韩金睿」</p>
+                        <a href="" target="_blank" rel="noopener" class="card-website-link" title="Website"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-10 col-lg-9 col-md-8">
+        <h2>
+            Jinrui Han「韩金睿」 
+            
+            
+        </h2>
+        <p></p>
+        Hi! I am a first-year PhD student at <a href="https://mmlab.hk/" target="_blank" rel="noopener">MMLab@HKU</a>(The University of Hong Kong), advised by <a href="http://luoping.me/" target="_blank" rel="noopener">Prof.Ping Luo</a>.  I received my M.Eng. and B.Eng. degrees both from <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">SJTU</a>(Shanghai Jiao Tong University).
+        <p></p>
+        I am currently a research intern at <a href="https://www.teleai.com.cn/product/AboutTeleAI_en" target="_blank" rel="noopener">TeleAI</a>, co-working with <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Dr. Chenjia Bai</a> and <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Xuelong Li</a> to advance research on humanoid whole-body control.
+        <p></p>
+        Feel free to contact me for any discussions or collaborations via <a href="mailto:jrhan82@sjtu.edu.cn">email</a> or <a href="assets/img/wechat.png">wechat</a> !
+        <p></p>
+        <div class="codebox">
+            Research interests:<code>Humanoid Whole Body Control</code>, <code>Humanoid Loco-Manipulation</code>, <code>Humanoid VLA</code>.
+            <!-- <p></p> 
+             -->
+        </div>
+    </div>
+</div>
+
+            <!-- Affiliations section -->
+
+<hr>
+<div class="row" id="affiliations">
+    <div class="col">
+        <h2 class="mb-3 section-heading">🎓 affiliations</h2>
+        <div class="affiliation-board">
+            
+            <div class="affiliation-card">
+                <div class="affiliation-mark">
+                    <img src="assets/img/hku.jpg" alt="MMLab, The University of Hong Kong" loading="lazy">
+                    <span class="affiliation-year">2026 - Now</span>
+                </div>
+                <div class="affiliation-copy">
+                    <div class="affiliation-title">Ph.D. Student</div>
+                    <div class="affiliation-org">MMLab, The University of Hong Kong</div>
+                    <div class="affiliation-note">Advised by Prof. <a href="http://luoping.me/" target="_blank" rel="noopener">Ping Luo</a>.</div>
+                </div>
+            </div>
+            
+            <div class="affiliation-card">
+                <div class="affiliation-mark">
+                    <img src="assets/img/teleai.png" alt="TeleAI, China Telecom" loading="lazy">
+                    <span class="affiliation-year">2025 - Now</span>
+                </div>
+                <div class="affiliation-copy">
+                    <div class="affiliation-title">Research Intern</div>
+                    <div class="affiliation-org">TeleAI, China Telecom</div>
+                    <div class="affiliation-note">Working with Dr. <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Chenjia Bai</a> and Prof. <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=en" target="_blank" rel="noopener">Xuelong Li</a>.</div>
+                </div>
+            </div>
+            
+            <div class="affiliation-card">
+                <div class="affiliation-mark">
+                    <img src="assets/img/sjtu.png" alt="Shanghai Jiao Tong University" loading="lazy">
+                    <span class="affiliation-year">2019 - 2026</span>
+                </div>
+                <div class="affiliation-copy">
+                    <div class="affiliation-title">B.Eng. & M.Eng.</div>
+                    <div class="affiliation-org">Shanghai Jiao Tong University</div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <p></p>
+    </div>
+</div>
+
+            <!-- News section -->
+
+<hr>
+<div class="row" id="news">
+    <div class="col">
+        <h2 class="mb-3 section-heading">📰 news</h2>
+        <ul class="list-unstyled news-list mb-0">
+            
+            <li class="news-list-item mb-2"><span class="news-list-date">2026-04</span> <span class="news-list-text"><a href='https://husky-humanoid.github.io/' target='_blank' rel='noopener'>HUSKY</a> is accepted by <b>RSS 2026</b>.</span></li>
+            
+            <li class="news-list-item mb-2"><span class="news-list-date">2026-03</span> <span class="news-list-text">Invited talk at <a href='https://mp.weixin.qq.com/s/Oz0o2Zp_e2PTCSqnLqHLWg?poc_token=HNfOvGmjNbFC6GgZT1t7mCsOLmLIoTxCtDDiF2aW' target='_blank' rel='noopener'>具身智能之心.</a></span></li>
+            
+            <li class="news-list-item mb-2"><span class="news-list-date">2026-02</span> <span class="news-list-text">Release the project and code for <a href='https://husky-humanoid.github.io/' target='_blank' rel='noopener'>HUSKY</a>, <a href='https://text-op.github.io/' target='_blank' rel='noopener'>TextOp</a>, <a href='https://soccer-humanoid.github.io/' target='_blank' rel='noopener'>HumanoidSoccer</a>.</span></li>
+            
+            <li class="news-list-item mb-2"><span class="news-list-date">2026-01</span> <span class="news-list-text"><a href='https://kungfubot2-humanoid.github.io/' target='_blank' rel='noopener'>KungfuBot2</a> is accepted by <b>ICRA 2026</b>.</span></li>
+            
+            <li class="news-list-item mb-2"><span class="news-list-date">2025-10</span> <span class="news-list-text">Release the project and code for <a href='https://kungfubot2-humanoid.github.io/' target='_blank' rel='noopener'>KungfuBot2</a>.</span></li>
+            
+            <li class="news-list-item mb-2"><span class="news-list-date">2025-09</span> <span class="news-list-text"><a href='https://kungfubot.github.io/' target='_blank' rel='noopener'>KungfuBot</a> is accepted by <b>NeurIPS 2025</b>.</span></li>
+            
+            <li class="news-list-item mb-2"><span class="news-list-date">2025-06</span> <span class="news-list-text">Invited talk at <a href='https://www.shenlanxueyuan.com/open/course/286' target='_blank' rel='noopener'>深蓝学院</a> and <a href='https://www.openrobot.me/talk' target='_blank' rel='noopener'>OpenGRO.</a></span></li>
+            
+            <li class="news-list-item mb-2"><span class="news-list-date">2025-06</span> <span class="news-list-text">Release the project and code for <a href='https://kungfubot.github.io/' target='_blank' rel='noopener'>Kungfubot</a>.</span></li>
+            
+        </ul>
+        <p></p>
+    </div>
+</div>
+
+            <!-- Research section -->
+
+<hr>
+<div class="row" id="research">
+    <div class="col">
+        <h2 class="mb-4 publications-heading">📄 projects</h2>
+        <p></p>
+        <div id="filters-project" class="publications-filters">
+            <button class="filter-button active" data-filter="*">all</button>
+            
+                <button class="filter-button" data-filter="Humanoid WBC">Humanoid WBC</button>
+            
+                <button class="filter-button" data-filter="Humanoid-Object Interaction">Humanoid-Object Interaction</button>
+            
+        </div>
+        <p></p>
+        <div id="projects" class="isotope publications-inner">
+            
+                <div class="project" data-filter="Humanoid-Object Interaction">
+    <div class="row mb-3 align-items-center">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-thumb">
+                <img src="assets/img/husky.gif" alt="Humanoid Skateboarding System via Physics-Aware Whole-Body Control">
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                <span class="project-system-name">HUSKY</span>: Humanoid Skateboarding System via Physics-Aware Whole-Body Control
+            </div>
+            <div class="project-venue">
+                <a href="https://roboticsconference.org/program/papersession/?session=Humanoids" target="_blank" rel="noopener"><b>Robotics: Science and Systems (RSS), 2026</b></a>
+                
+            </div>
+            <div class="project-authors"><u>Jinrui Han*</u>, Dewei Wang*, Chenyun Zhang, Xinzhe Liu, Ping Luo, Chenjia Bai†, Xuelong Li†</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2602.03205" target="_blank" rel="noopener">arXiv</a>
+                <a class="project-link" href="https://github.com/TeleHuman/humanoid_skateboarding" target="_blank" rel="noopener">code</a>
+                <a class="project-link" href="https://husky-humanoid.github.io/" target="_blank" rel="noopener">project</a>
+                
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A reinforcement learning–based whole-body control framework for stable and agile humanoid skateboarding.</div>
+        </div>
+    </div>
+</div>
+
+            
+                <div class="project" data-filter="Humanoid WBC">
+    <div class="row mb-3 align-items-center">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-thumb">
+                <img src="assets/img/textop.gif" alt="Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control">
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                <span class="project-system-name">TextOp</span>: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control
+            </div>
+            <div class="project-venue">
+                In Submission
+                
+            </div>
+            <div class="project-authors">Weiji Xie*, Jiakun Zheng*, <u>Jinrui Han</u>, Jiyuan Shi, Weinan Zhang†, Chenjia Bai†, Xuelong Li</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2602.07439" target="_blank" rel="noopener">arXiv</a>
+                <a class="project-link" href="https://github.com/TeleHuman/TextOp" target="_blank" rel="noopener">code</a>
+                <a class="project-link" href="https://text-op.github.io/" target="_blank" rel="noopener">project</a>
+                
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A real-time interactive text-driven framework for humanoid motion generation and control that supports streaming language commands.</div>
+        </div>
+    </div>
+</div>
+
+            
+                <div class="project" data-filter="Humanoid-Object Interaction">
+    <div class="row mb-3 align-items-center">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-thumb">
+                <img src="assets/img/soccer.gif" alt="Learning Soccer Skills for Humanoid Robots A Progressive Perception-Action Framework">
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                Learning Soccer Skills for Humanoid Robots A Progressive Perception-Action Framework
+            </div>
+            <div class="project-venue">
+                In Submission
+                
+            </div>
+            <div class="project-authors">Jipeng Kong*, Xinzhe Liu*, Yuhang Lin, <u>Jinrui Han</u>, Sören Schwertfeger, Chenjia Bai†, Xuelong Li†</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2602.05310" target="_blank" rel="noopener">arXiv</a>
+                <a class="project-link" href="https://github.com/TeleHuman/HumanoidSoccer" target="_blank" rel="noopener">code</a>
+                <a class="project-link" href="https://soccer-humanoid.github.io/" target="_blank" rel="noopener">project</a>
+                
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A progressive perception–action framework enabling robust, human-like soccer kicking on humanoid robots.</div>
+        </div>
+    </div>
+</div>
+
+            
+                <div class="project" data-filter="Humanoid WBC">
+    <div class="row mb-3 align-items-center">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-thumb">
+                <img src="assets/img/kungfubot2.gif" alt="Learning Versatile Motion Skills for Humanoid Whole-Body Control">
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                <span class="project-system-name">KungfuBot2</span>: Learning Versatile Motion Skills for Humanoid Whole-Body Control
+            </div>
+            <div class="project-venue">
+                <a href="https://2026.ieee-icra.org/" target="_blank" rel="noopener"><b>International Conference on Robotics and Automation (ICRA), 2026</b></a>
+                
+            </div>
+            <div class="project-authors"><u>Jinrui Han</u>, Weiji Xie, Jiakun Zheng, Jiyuan Shi, Weinan Zhang, Ting Xiao, Chenjia Bai†</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2509.16638" target="_blank" rel="noopener">arXiv</a>
+                <a class="project-link" href="https://github.com/TeleHuman/PBHC" target="_blank" rel="noopener">code</a>
+                <a class="project-link" href="https://kungfubot2-humanoid.github.io/" target="_blank" rel="noopener">project</a>
+                
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A unified whole-body controller that enables humanoid robots to learn diverse and dynamic behaviors within a single policy.</div>
+        </div>
+    </div>
+</div>
+
+            
+                <div class="project" data-filter="Humanoid WBC">
+    <div class="row mb-3 align-items-center">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-thumb">
+                <img src="assets/img/kungfubot.png" alt="Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills">
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                <span class="project-system-name">KungfuBot</span>: Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills
+            </div>
+            <div class="project-venue">
+                <a href="https://neurips.cc/" target="_blank" rel="noopener"><b>Advances in Neural Information Processing Systems (NeurIPS), 2025</b></a>
+                
+            </div>
+            <div class="project-authors">Weiji Xie*, <u>Jinrui Han*</u>, Jiakun Zheng*, Huanyu Li, Xinzhe Liu, Jiyuan Shi, Weinan Zhang, Chenjia Bai†, Xuelong Li†.</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2506.12851" target="_blank" rel="noopener">arXiv</a>
+                <a class="project-link" href="https://github.com/TeleHuman/PBHC" target="_blank" rel="noopener">code</a>
+                <a class="project-link" href="https://kungfubot.github.io/" target="_blank" rel="noopener">project</a>
+                <a class="project-link" href="https://www.openrobot.me/talk" target="_blank" rel="noopener">talk</a>
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A physics-based humanoid control framework, aiming to master highly-dynamic human behaviors such as Kungfu and dancing.</div>
+        </div>
+    </div>
+</div>
+
+            
+        </div>
+        <p></p>
+    </div>
+</div>
+
+            
+            
+            
+            <!-- Misc section -->
+
+<!-- <hr>
+<div class="row" id="misc">
+    <div class="col">
+        <h2 class="mb-3" style="font-size: 1.5rem;">💬 misc.</h2>
+        <div class="misc-content" style="font-size: 0.95rem;">
+            <p>I enjoy playing soccer and am a fan of <em>ManUtd</em>. I also play FPS games, such as <em>Apex</em> and <em>Valorant</em>. In addition, I like traveling and watching movies.</p>
+        </div>
+        <p></p>
+    </div>
+</div> -->
+
+            <!-- Footer section -->
+
+<div>‎</div>
+<hr>
+<footer class="pt-2 my-md-2 pt-md-">
+    <div class="row justify-content-center">
+        <div class="col text-left align-self-center">
+            <p class="h6 mb-1">© Jinrui 2026</p>
+            <a href="https://github.com/mkhangg/academic-website" target="_blank" rel="noopener"><b>> web source @github</b></a>
+        </div>
+    </div>
+    <!-- <div class="row justify-content-center">
+        <div class="col text-center">
+            <p class="page-views-mini mb-0" title="All-time page views (third-party counter)">
+                <i class="fa fa-chart-line" aria-hidden="true"></i>
+                <span class="text-muted">Total page views:</span>
+                <span id="busuanzi_value_site_pv">…</span>
+            </p>
+        </div>
+    </div> -->
+    <p></p>
+</footer>
+
+        </div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Isotope JS -->
+        <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.2/dist/isotope.pkgd.min.js"></script>
+
+        <!-- OwlCarousel2 JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+        <!-- Axios JS -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+		<!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+		<!-- Core theme JS-->
+        <script src="js/scripts.js?v=20260714"></script>
+
+        <!-- <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+
+    </body>
+</html>

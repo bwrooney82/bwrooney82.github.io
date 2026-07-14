@@ -9,7 +9,7 @@
         <meta name="description" content="website"/>
         <meta name="author" content="khang nguyen"/>
         <title>{{ site.title }}</title>
-        <link rel="icon" type="image/x-icon" href="{{ site.icon-pic }}"/>
+        <link rel="icon" type="image/x-icon" href="{{ site.icon_pic }}"/>
         
         <!-- Font Awesome icons -->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
         <!-- Core theme CSS -->
-        <link href="styles/styles.css" rel="stylesheet"/>
+        <link href="styles/styles.css?v=20260714f" rel="stylesheet"/>
 
     </head>
 
@@ -41,9 +41,20 @@
         <!-- Back to top button -->
         <a id="back-to-top-button"></a>
 
+        <!-- Dark/light theme toggle button -->
+        <div class="toggle-theme-button" onclick="toggleTheme()" title="Toggle theme" role="button">🌙</div>
+
         <!-- Content -->
         <div class="container" style="padding-top: 3rem;">
-            {{ content }}
+            {% include "_sections/about.html" %}
+            {% include "_sections/affiliations.html" %}
+            {% include "_sections/news.html" %}
+            {% include "_sections/research.html" %}
+            {% include "_sections/outreach.html" %}
+            {% include "_sections/resources.html" %}
+            {% include "_sections/gallery.html" %}
+            {% include "_sections/misc.html" %}
+            {% include "_sections/footer.html" %}
         </div>
 
         <!-- Bootstrap core JS-->
@@ -65,7 +76,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
 		<!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="js/scripts.js?v=20260714"></script>
 
         <!-- <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
 
