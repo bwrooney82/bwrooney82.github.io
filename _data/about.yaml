@@ -1,39 +1,19 @@
 # basic information
 name: Jinrui Han「韩金睿」
 profile-pic: assets/img/jinrui.png
-# pronunciation: /kʰæŋ/
-# pronunciation-emoji: 🎧
-
-# emoji indicator
-emoji: 🤖
-desc-emoji: 
 
 # social links
-scholar: https://scholar.google.com.pr/citations?user=mJ7tn3MAAAAJ&hl=zh-CN
-# researchgate: https://www.researchgate.net/profile/Jinrui-Han?ev=hdr_xprf
+scholar: https://scholar.google.com.pr/citations?user=mJ7tn3MAAAAJ&hl=en
 github: https://github.com/bwrooney82
 twitter: https://x.com/jinrui82
 wechat: assets/img/wechat.png
-projects:             # delete "show" or leave it blank to hide this icon
-# location: https://maps.app.goo.gl/8JnwKmgiywhEs8C96
-# codepen: 
-# orcid: https://orcid.org/0000-0003-3471-5533
-# contact: show            # delete "show" or leave it blank to hide this icon
-
-# information for contact card
-dept: me @ sjtu
-lab: 
-email: jrhan82@sjtu.edu.cn
-phone: +86 182 7314 4065
-website: 
-web-dns: 
 
 # about me
 first-paragraph: Hi! I am a first-year PhD student at <a href="https://mmlab.hk/" target="_blank" rel="noopener">MMLab@HKU</a>(The University of Hong Kong), advised by <a href="http://luoping.me/" target="_blank" rel="noopener">Prof.Ping Luo</a>.  I received my M.Eng. and B.Eng. degrees both from <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">SJTU</a>(Shanghai Jiao Tong University).
 
 second-paragraph: I am currently a research intern at <a href="https://www.teleai.com.cn/product/AboutTeleAI_en" target="_blank" rel="noopener">TeleAI</a>, co-working with <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Dr. Chenjia Bai</a> and <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Xuelong Li</a> to advance research on humanoid whole-body control.
 
-third-paragraph: Feel free to contact me for any discussions or collaborations via <a href="mailto:jrhan82@sjtu.edu.cn">email</a> or <a href="assets/img/wechat.png">wechat</a> !
+third-paragraph: Feel free to contact me for any discussions or collaborations via <a href="mailto:bwln010802@gmail.com">email</a> or <a href="assets/img/wechat.png">wechat</a> !
 research-introduction: Research interests:<code>Humanoid Whole Body Control</code>, <code>Humanoid Loco-Manipulation</code>, <code>Humanoid VLA</code>.
 
 
