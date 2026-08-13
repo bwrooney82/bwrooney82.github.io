@@ -50,7 +50,7 @@
                 </div>
                 <div class="back">
                     <div class="contact-info-card">
-                        <p class="card-name">{{ data.about.name }}</p>
+                        <p class="card-name">{{ data.about.name }}{% if data.about.name_cn %}<span class="name-cn">{{ data.about.name_cn }}</span>{% endif %}</p>
                         <a href="{{ data.about.website }}" target="_blank" rel="noopener" class="card-website-link" title="Website">{{ data.about.web_dns }}</a>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
 
     <div class="col-xl-10 col-lg-9 col-md-8">
         <h2>
-            {{ data.about.name }} 
+            {{ data.about.name }}{% if data.about.name_cn %}<span class="name-cn">{{ data.about.name_cn }}</span>{% endif %}
             {% if data.about.pronunciation %} <span class="text-primary"> {{ data.about.pronunciation }} </span> {% endif %}
             {% if data.about.pronunciation_emoji %} <span id="volumeEmoji" role="button"> {{ data.about.pronunciation_emoji }} </span> {% endif %}
         </h2>

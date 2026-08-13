@@ -12,6 +12,7 @@ projects:
   - title: Humanoid Skateboarding System via Physics-Aware Whole-Body Control
     system-name: HUSKY
     gif: assets/img/husky.gif
+    venue-tag: RSS 2026
     conference: "<b>Robotics: Science and Systems (RSS), 2026</b>"
     conference-web: https://roboticsconference.org/program/papersession/?session=Humanoids
     status:
@@ -26,7 +27,8 @@ projects:
   - title: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control
     system-name: TextOp
     gif: assets/img/textop.gif
-    conference: In Submission
+    venue-tag: Preprint
+    conference: Preprint
     conference-web: 
     status:
     authors: Weiji Xie*, Jiakun Zheng*, <u>Jinrui Han</u>, Jiyuan Shi, Weinan Zhang†, Chenjia Bai†, Xuelong Li 
@@ -40,7 +42,8 @@ projects:
   - title: Learning Soccer Skills for Humanoid Robots A Progressive Perception-Action Framework
     system-name: 
     gif: assets/img/soccer.gif
-    conference: In Submission
+    venue-tag: Preprint
+    conference: Preprint
     conference-web: 
     status:
     authors: Jipeng Kong*, Xinzhe Liu*, Yuhang Lin, <u>Jinrui Han</u>, Sören Schwertfeger, Chenjia Bai†, Xuelong Li† 
@@ -55,6 +58,7 @@ projects:
   - title: Learning Versatile Motion Skills for Humanoid Whole-Body Control
     system-name: KungfuBot2
     gif: assets/img/kungfubot2.gif
+    venue-tag: ICRA 2026
     conference: <b>International Conference on Robotics and Automation (ICRA), 2026</b>
     conference-web: https://2026.ieee-icra.org/
     status:
@@ -68,7 +72,8 @@ projects:
 
   - title: Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills
     system-name: KungfuBot
-    gif: assets/img/kungfubot.png
+    gif: assets/img/kungfubot.gif
+    venue-tag: NeurIPS 2025
     conference: <b>Advances in Neural Information Processing Systems (NeurIPS), 2025</b> 
     conference-web: https://neurips.cc/
     status:

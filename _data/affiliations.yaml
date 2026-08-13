@@ -3,15 +3,15 @@
 items:
 
   - logo: assets/img/hku.jpg
-    year: "2026 - Now"
+    year: "2026.09 - Now"
     title: Ph.D. Student
     org: MMLab, The University of Hong Kong
     note: Advised by Prof. <a href="http://luoping.me/" target="_blank" rel="noopener">Ping Luo</a>.
 
   - logo: assets/img/teleai.png
-    year: "2025 - Now"
+    year: "2025.02 - 2026.08"
     title: Research Intern
-    org: TeleAI, China Telecom
+    org: TeleAI
     note: Working with Dr. <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Chenjia Bai</a> and Prof. <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=en" target="_blank" rel="noopener">Xuelong Li</a>.
 
   - logo: assets/img/sjtu.png

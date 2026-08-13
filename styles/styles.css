@@ -458,6 +458,28 @@ code {
     margin-bottom: 5px;
     font-weight: bold;
 }
+
+/* Chinese name next to the Latin one — smaller, serif, lighter */
+.name-cn {
+    font-family: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+    font-size: 0.78em;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-left: 0.5em;
+    vertical-align: 0.08em;
+    white-space: nowrap;
+}
+.name-cn::before {
+    content: '「';
+}
+.name-cn::after {
+    content: '」';
+    letter-spacing: 0;
+}
+.card-name .name-cn {
+    color: #9aa4b2;
+}
 .card-website-link {
     color: #888;
     font-size: 19px;
@@ -519,6 +541,35 @@ code {
 }
 .project:hover .project-thumb img {
     transform: scale(1.045);
+}
+/* Venue badge floating over the thumbnail's top-left corner */
+.project-media {
+    position: relative;
+}
+.project-venue-tag {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    z-index: 3;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    background-color: #1e3a8a;
+    border: 2px solid var(--bg);
+    border-radius: 8px;
+    padding: 1px 10px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.18);
+}
+.project-venue-tag.is-preprint {
+    background-color: #64748b;
+}
+.dark-theme .project-venue-tag {
+    background-color: #2563eb;
+}
+.dark-theme .project-venue-tag.is-preprint {
+    background-color: #475569;
 }
 
 /* Project text content */
