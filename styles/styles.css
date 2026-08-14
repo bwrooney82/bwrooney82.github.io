@@ -3,12 +3,14 @@
    adds a theme class), dark overrides via body.dark-theme
    ============================================================ */
 body {
-    --bg: #fdfdfd;
-    --surface: #f5f7fa;
-    --text: #1f2937;
+    /* Page sits on a soft blue-grey tint; cards/pills go white so they lift
+       off it instead of blending the way two near-whites did */
+    --bg: #f5f5f7;
+    --surface: #ffffff;
+    --text: #1frgb(0, 0, 0)
     --text-muted: #5b6474;
     --heading: #111827;
-    --border: #e5e9f0;
+    --border: #e2e7f0;
     --accent: #2563eb;
     --accent-strong: #1d4ed8;
     --accent-soft: rgba(37, 99, 235, 0.09);
@@ -16,7 +18,7 @@ body {
     --shadow: 0 1px 3px rgba(15, 23, 42, 0.08), 0 4px 14px rgba(15, 23, 42, 0.05);
 }
 body.dark-theme {
-    --bg: #0f172a;
+    --bg: #f5f5f7;
     --surface: #1e293b;
     --text: #dbe3ee;
     --text-muted: #94a3b8;
@@ -232,53 +234,40 @@ code {
 }
 
 
-/* Border styles for profile picture */
+/* The photo needs a fixed slice, not a 12-column share — on medium screens a
+   2/12 share is wider than the photo and just eats into the bio text */
+@media (min-width: 768px) {
+    .about-row .about-photo {
+        flex: 0 0 194px;   /* 164px photo + the row's 15px gutters */
+        max-width: 194px;
+    }
+    .about-row .about-bio {
+        flex: 1 1 0;
+        max-width: none;
+    }
+}
+
+/* Profile picture: plain circle, no decorative ring */
 .ring-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.ring {
+.profile-image {
     width: 164px;
     max-width: 100%;   /* never wider than the column it lives in */
     aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    box-sizing: border-box;
-    position: relative;
-    background: conic-gradient(from 210deg, #2563eb, #7c3aed, #06b6d4, #2563eb);
-}
-.ring::before {
-    display: none;
-}
-.hollow-ring {
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--bg);
-    z-index: 1;
-    transition: 0.4s;
-}
-.profile-image {
-    width: calc(100% - 14px);
-    height: calc(100% - 14px);
     object-fit: cover;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: none;
-    z-index: 2;
-    transition: 0.4s;
+    border: 1px solid var(--border);
+    transition: border-color 0.4s;
 }
 
-/* Divider under the profile photo */
-.col-lg-2 hr, .col-md-4 hr {
-    margin: 1.1rem 1.4rem;
+/* Breathing room when the photo stacks above the bio on narrow screens */
+@media (max-width: 767px) {
+    .ring-container {
+        margin-bottom: 1.25rem;
+    }
 }
 
 
@@ -314,46 +303,104 @@ code {
 }
 
 
-/* Handle for social icons: 2-per-row grid centered under the photo */
-.social-icons {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-content: center;
-    justify-items: center;
+/* Social links: labeled pills sitting right under the name */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem 1.1rem;
-    max-width: 164px;   /* same width as the profile ring */
-    margin: 0 auto;
+    gap: 0.5rem;
+    margin: 0.35rem 0 1.15rem;
 }
-.social-icons .social-icon {
+.social-link {
+    --brand: var(--accent);
+    position: relative;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    height: 3.4rem;
-    width: 3.4rem;
-    color: #495057;
-    border-radius: 100%;
-    transition: transform 0.25s ease;
+    gap: 0.42rem;
+    padding: 0.28rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background-color: var(--surface);
+    color: var(--text-muted);
+    font-size: 0.83rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+    white-space: nowrap;
     cursor: pointer;
+    transition: transform 0.25s ease, color 0.25s, border-color 0.25s,
+                box-shadow 0.25s, background-color 0.4s;
 }
-.social-icons .social-icon:hover {
-    transform: translateY(-4px) scale(1.12);
+.social-link:hover,
+.social-link:focus-visible {
+    color: var(--brand);
+    border-color: var(--brand);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
 }
-/* Icon glyph size (overrides the inline 35px so it stays tunable here) */
-.social-icons .social-icon i,
-.social-icons .social-icon svg.svg-inline--fa {
-    font-size: 41px !important;
+/* Icon glyph: brand-coloured, sized relative to the pill label */
+.social-link i,
+.social-link svg {
+    font-size: 1.02rem !important;
+    width: 1.02rem;
+    height: 1.02rem;
+    color: var(--brand);
+    fill: currentColor;
+    flex-shrink: 0;
 }
-.social-icons .social-icon svg:not(.svg-inline--fa) {
-    width: 41px !important;
-    height: 41px !important;
+.social-link svg.svg-inline--fa {
+    width: auto;
+    height: 1em;
 }
-/* Soften the pure-black brand icons in dark mode */
-.dark-theme .social-icons .social-icon svg {
-    fill: #e2e8f0 !important;
+
+/* Per-service brand accents */
+.social-link.link-scholar      { --brand: #4285f4; }
+.social-link.link-researchgate { --brand: #00d0bb; }
+.social-link.link-github       { --brand: #24292f; }
+.social-link.link-x            { --brand: #0f1419; }
+.social-link.link-email        { --brand: #7c3aed; }
+.social-link.link-wechat       { --brand: #07c160; }
+.social-link.link-resume       { --brand: #bd5d38; }
+.social-link.link-orcid        { --brand: #a6ce39; }
+.social-link.link-location     { --brand: #6b7280; }
+/* Near-black brands need lifting in dark mode */
+.dark-theme .social-link.link-github,
+.dark-theme .social-link.link-x { --brand: #e2e8f0; }
+.dark-theme .social-link.link-email { --brand: #a78bfa; }
+
+/* WeChat QR preview on hover/focus */
+.social-link .qr-pop {
+    position: absolute;
+    top: calc(100% + 0.55rem);   /* below the pill: the row sits near the top of the page */
+    left: 50%;
+    transform: translate(-50%, -6px);
+    padding: 0.4rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 20;
 }
-.dark-theme .social-icons .social-icon .fa-github {
-    color: #e2e8f0 !important;
+.social-link .qr-pop img {
+    display: block;
+    width: 132px;
+    height: 132px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+.social-link.has-qr:hover .qr-pop,
+.social-link.has-qr:focus-visible .qr-pop {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+/* Touch screens have no hover — tapping the pill opens the image instead */
+@media (hover: none) {
+    .social-link .qr-pop { display: none; }
 }
 
 
@@ -518,6 +565,9 @@ code {
 }
 .publications-inner .project {
     padding: 16px 0;
+    /* Isotope absolutely positions each item, which otherwise shrink-wraps to
+       its own longest line — leaving every row a different width */
+    width: 100%;
 }
 .project:last-child {
     border-bottom: none;
@@ -535,7 +585,8 @@ code {
 }
 .project-thumb img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 16 / 9;   /* source gifs differ slightly; crop to one shape so rows align */
+    object-fit: cover;
     display: block;
     transition: transform 0.35s ease;
 }
@@ -545,6 +596,13 @@ code {
 /* Venue badge floating over the thumbnail's top-left corner */
 .project-media {
     position: relative;
+}
+/* Stacked layout: a full-width thumbnail would dwarf the text, so cap it */
+@media (max-width: 575px) {
+    .project-media {
+        max-width: 340px;
+        margin-bottom: 0.75rem;
+    }
 }
 .project-venue-tag {
     position: absolute;
@@ -626,6 +684,10 @@ code {
     margin-bottom: 6px;
 }
 .project-link {
+    /* flex + centre so the label and the star count share one axis instead of
+       sitting on the text baseline, which the icon throws off */
+    display: inline-flex;
+    align-items: center;
     font-family: 'Fira Code', monospace;
     font-size: 0.74rem;
     font-weight: 500;
@@ -640,6 +702,26 @@ code {
     background-color: var(--accent);
     color: #ffffff;
     text-decoration: none;
+}
+/* GitHub star count appended to the code link (filled in by scripts.js) */
+.repo-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 7px;
+    padding-left: 7px;
+    border-left: 1px solid currentColor;
+    line-height: 1;
+    opacity: 0.8;
+}
+.repo-stars-mark {
+    width: 0.95em;
+    height: 0.95em;
+    fill: currentColor;
+}
+.repo-stars-count {
+    /* nudge: the star glyph and the digits centre a hair above the icon */
+    line-height: 1;
 }
 .dark-theme .project-link:hover {
     color: #0f172a;
@@ -786,13 +868,29 @@ div.desc {
 /* News list: fixed height, scrolls with the mouse wheel */
 .news-list {
     font-size: 0.93rem;
-    max-height: 12rem;   /* ~6 items visible; the rest scroll */
+    max-height: 16rem;   /* ~8 items visible; the rest scroll */
     overflow-y: auto;
     padding-right: 12px;
     scrollbar-width: thin;
 }
+/* Only when the list actually overflows (class set in scripts.js): fade the
+   bottom line out so a half-visible item reads as "scroll for more" */
+.news-list.is-scrollable {
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 26px), transparent);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 26px), transparent);
+}
 .news-list::-webkit-scrollbar {
     width: 6px;
+}
+/* Items wrap to two lines on phones, so the cap would slice one in half */
+@media (max-width: 767px) {
+    .news-list {
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
 }
 .news-list-item {
     display: flex;
@@ -850,6 +948,17 @@ footer {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
+/* Footer sits a little further from the last section, then closes the page */
+.footer-rule {
+    margin-top: 3rem;
+}
+.site-footer {
+    padding-bottom: 2.5rem;
+    font-size: 0.84rem;
+}
+.site-footer .h6 {
+    font-size: 0.84rem;
+}
 footer .h6 {
     color: var(--text-muted);
     font-size: 0.9rem;
@@ -862,16 +971,14 @@ footer a:hover {
 }
 /* Affiliations: a horizontal row of cards (logo + role + institution) */
 .affiliation-board {
-    display: flex;
+    /* grid rather than a scroller: cards span the full text column and wrap
+       to one per row on phones instead of hiding behind a sideways scroll */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 16px;
-    overflow-x: auto;
     padding: 4px 2px 10px 2px;
-    scrollbar-width: thin;
 }
 .affiliation-card {
-    flex: 1 1 230px;
-    min-width: 210px;
-    max-width: 340px;
     padding: 12px;
     border: 1px solid var(--border);
     border-radius: 12px;

@@ -12,10 +12,10 @@ items:
     year: "2025.02 - 2026.08"
     title: Research Intern
     org: TeleAI
-    note: Working with Dr. <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Chenjia Bai</a> and Prof. <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=en" target="_blank" rel="noopener">Xuelong Li</a>.
+    note: Working with Dr. <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Chenjia Bai</a>.
 
   - logo: assets/img/sjtu.png
     year: "2019 - 2026"
     title: B.Eng. & M.Eng.
     org: Shanghai Jiao Tong University
-    note:
+    note: Mechanical Engineering
