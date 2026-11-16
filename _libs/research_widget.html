@@ -1,0 +1,36 @@
+<div class="project{% if project.author_role %} project-highlight{% endif %}" data-filter="{{ project.category }}">
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-media">
+                {% if project.venue_tag %}<span class="project-venue-tag{% if project.venue_tag == 'Preprint' %} is-preprint{% endif %}">{{ project.venue_tag }}</span>{% endif %}
+                <div class="project-thumb">
+                    {% if project.video %}
+                    <video autoplay muted loop playsinline preload="metadata" poster="{{ project.gif }}" aria-label="{{ project.system_name }} demonstration">
+                        <source src="{{ project.video }}" type="video/mp4">
+                        <img src="{{ project.gif }}" alt="{{ project.title }}">
+                    </video>
+                    {% else %}
+                    <img src="{{ project.gif }}" alt="{{ project.title }}">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                {% if project.system_name %}<span class="project-system-name">{{ project.system_name }}</span>: {% endif %}{{ project.title }}
+            </div>
+            <div class="project-venue">
+                {% if project.conference_web %}<a href="{{ project.conference_web }}" target="_blank" rel="noopener">{{ project.conference }}</a>{% else %}{{ project.conference }}{% endif %}
+                {% if project.status %}<span class="project-status">{{ project.status }}</span>{% endif %}
+            </div>
+            <div class="project-authors">{{ project.authors }}</div>
+            <div class="project-links">
+                {% if project.arxiv %}<a class="project-link" href="{{ project.arxiv }}" target="_blank" rel="noopener">arXiv</a>{% endif %}
+                {% if project.code %}<a class="project-link" href="{{ project.code }}" target="_blank" rel="noopener">code</a>{% endif %}
+                {% if project.project %}<a class="project-link" href="{{ project.project }}" target="_blank" rel="noopener">project</a>{% endif %}
+                {% if project.talk %}<a class="project-link" href="{{ project.talk }}" target="_blank" rel="noopener">talk</a>{% endif %}
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — {{ project.TLDR }}</div>
+        </div>
+    </div>
+</div>

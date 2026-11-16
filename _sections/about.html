@@ -1,0 +1,30 @@
+<!-- About section -->
+
+<div class="row mb-4 about-row">
+    <div class="col-xl-2 col-lg-3 col-md-4 about-photo">
+        <div class="ring-container">
+            <img class="profile-image" src="{{ data.about.profile_pic }}" alt="{{ data.about.name }}">
+        </div>
+    </div>
+
+    <div class="col-xl-10 col-lg-9 col-md-8 about-bio">
+        <h2 class="profile-name">
+            {{ data.about.name }}{% if data.about.name_cn %}<span class="name-cn">{{ data.about.name_cn }}</span>{% endif %}
+        </h2>
+
+        <!-- Social links: labeled pills right under the name -->
+        <div class="social-links">
+            {% if data.about.email %}<a class="social-link link-email" href="mailto:{{ data.about.email }}"><i class="fa fa-envelope"></i><span>Email</span></a>{% endif %}
+            {% if data.about.github %}<a class="social-link link-github" href="{{ data.about.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i><span>GitHub</span></a>{% endif %}
+            {% if data.about.scholar %}<a class="social-link link-scholar" href="{{ data.about.scholar }}" target="_blank" rel="noopener"><i class="fa fa-graduation-cap"></i><span>Scholar</span></a>{% endif %}
+            {% if data.about.wechat %}<a class="social-link link-wechat has-qr" href="{{ data.about.wechat }}" target="_blank" rel="noopener"><i class="fab fa-weixin"></i><span>WeChat</span><span class="qr-pop"><img src="{{ data.about.wechat }}" alt="WeChat QR code" loading="lazy"></span></a>{% endif %}
+            {% if data.about.twitter %}<a class="social-link link-x" href="{{ data.about.twitter }}" target="_blank" rel="noopener" aria-label="Follow @jinrui82 on X"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>Follow on X</span></a>{% endif %}
+        </div>
+
+        <div class="about-description">
+            <p>{{ data.about.first_paragraph }}</p>
+            <p>{{ data.about.second_paragraph }}</p>
+            <p class="about-contact">{{ data.about.third_paragraph }}</p>
+        </div>
+    </div>
+</div>

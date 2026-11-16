@@ -1,0 +1,828 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/inter-variable.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+/* ============================================================
+   Design tokens — light is the default (also applies before JS
+   adds a theme class), dark overrides via body.dark-theme
+   ============================================================ */
+body {
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    --bg: #fafbfc;
+    --surface: #ffffff;
+    --text: #1f2937;
+    --text-muted: #5b6474;
+    --heading: #111827;
+    --border: #e2e7f0;
+    --accent: #2563eb;
+    --accent-strong: #1d4ed8;
+    --accent-soft: rgba(37, 99, 235, 0.09);
+    --accent-gradient: linear-gradient(90deg, #2563eb, #7c3aed);
+    --shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+}
+body.dark-theme {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --text: #dbe3ee;
+    --text-muted: #94a3b8;
+    --heading: #f1f5f9;
+    --border: #2b3a52;
+    --accent: #60a5fa;
+    --accent-strong: #93c5fd;
+    --accent-soft: rgba(96, 165, 250, 0.14);
+    --accent-gradient: linear-gradient(90deg, #60a5fa, #a78bfa);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Document body styles */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-optical-sizing: auto;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background-color 0.4s, color 0.4s;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+h2 {
+    color: var(--heading);
+    font-weight: 600;
+}
+
+.site-container {
+    padding-top: clamp(2rem, 5vw, 4rem);
+}
+@media (min-width: 1200px) {
+    .site-container { max-width: 1080px; }
+}
+.profile-name {
+    margin: 0 0 0.9rem;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+}
+.about-description p {
+    margin-bottom: 0.85rem;
+}
+.about-description .about-contact {
+    margin-bottom: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Section heading (news / projects / …) */
+.section-heading,
+.publications-heading {
+    font-size: 1.15rem !important;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--heading);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0 1.4rem;
+    transition: border-color 0.4s;
+}
+
+
+/* Hyperlink, highlight, and text styles */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    background-color: transparent;
+    transition: color 0.2s;
+}
+a:hover {
+    color: var(--accent-strong);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+
+/* Styles for user selection */
+::selection {
+    background-color: #bfdbfe;
+    color: #1e293b;
+}
+.dark-theme ::selection {
+    background-color: #1e40af;
+    color: #f1f5f9;
+}
+
+
+/* The photo needs a fixed slice, not a 12-column share — on medium screens a
+   2/12 share is wider than the photo and just eats into the bio text */
+@media (min-width: 768px) {
+    .about-row .about-photo {
+        flex: 0 0 174px;
+        max-width: 174px;
+    }
+    .about-row .about-bio {
+        flex: 1 1 0;
+        max-width: none;
+    }
+}
+
+/* Profile picture: plain circle, no decorative ring */
+.ring-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-image {
+    width: 144px;
+    max-width: 100%;   /* never wider than the column it lives in */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    transition: border-color 0.4s;
+}
+
+/* Breathing room when the photo stacks above the bio on narrow screens */
+@media (max-width: 767px) {
+    .ring-container {
+        margin-bottom: 1.25rem;
+    }
+}
+
+
+/* Social links: labeled pills sitting right under the name */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0 0 1.15rem;
+}
+.social-link {
+    --brand: var(--accent);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--surface);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 550;
+    line-height: 1.6;
+    min-height: 32px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform 0.25s ease, color 0.25s, border-color 0.25s,
+                box-shadow 0.25s, background-color 0.4s;
+}
+.social-link:hover,
+.social-link:focus-visible {
+    color: var(--brand);
+    border-color: var(--brand);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+/* Icon glyph: brand-coloured, sized relative to the pill label */
+.social-link i,
+.social-link svg {
+    font-size: 1.02rem !important;
+    width: 1.02rem;
+    height: 1.02rem;
+    color: var(--brand);
+    fill: currentColor;
+    flex-shrink: 0;
+}
+.social-link svg.svg-inline--fa {
+    width: auto;
+    height: 1em;
+}
+
+/* Per-service brand accents */
+.social-link.link-scholar      { --brand: #4285f4; }
+.social-link.link-github       { --brand: #24292f; }
+.social-link.link-x            { --brand: #0f1419; }
+.social-link.link-email        { --brand: #7c3aed; }
+.social-link.link-wechat       { --brand: #07c160; }
+/* Keep brand icons and hover labels readable on dark cards. */
+.dark-theme .social-link.link-scholar { --brand: #60a5fa; }
+.dark-theme .social-link.link-github,
+.dark-theme .social-link.link-x { --brand: #e2e8f0; }
+.dark-theme .social-link.link-email { --brand: #a78bfa; }
+
+/* WeChat QR preview on hover/focus */
+.social-link .qr-pop {
+    position: absolute;
+    top: calc(100% + 0.55rem);   /* below the pill: the row sits near the top of the page */
+    left: 50%;
+    transform: translate(-50%, -6px);
+    padding: 0.4rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 20;
+}
+.social-link .qr-pop img {
+    display: block;
+    width: 132px;
+    height: 132px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+.social-link.has-qr:hover .qr-pop,
+.social-link.has-qr:focus-visible .qr-pop {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+/* Touch screens have no hover — tapping the pill opens the image instead */
+@media (hover: none) {
+    .social-link .qr-pop { display: none; }
+}
+
+
+/* Keep the Chinese name balanced with the Latin name. */
+.name-cn {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-size: 0.78em;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    margin-left: 0.5em;
+    vertical-align: 0.08em;
+    white-space: nowrap;
+}
+.name-cn::before {
+    content: '「';
+}
+.name-cn::after {
+    content: '」';
+    letter-spacing: 0;
+}
+
+
+/* Styles for project list */
+#projects {
+    margin: 0px;
+}
+
+/* Compact publications / projects layout */
+.publications-inner {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.0rem;
+    line-height: 1.5;
+}
+
+.project {
+    margin: 0px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+}
+.publications-inner .project {
+    box-sizing: border-box;
+    padding: 18px 16px;
+    margin-bottom: 8px;
+    border: 1px solid transparent;
+    border-bottom-color: var(--border);
+    /* Isotope absolutely positions each item, which otherwise shrink-wraps to
+       its own longest line — leaving every row a different width */
+    width: 100%;
+}
+.project:last-child {
+    border-bottom: none;
+}
+.publications-inner .project.project-highlight {
+    border: 1px solid #ebdec3;
+    border-radius: 12px;
+    background-color: #fff9ed;
+    box-shadow: inset 3px 0 #d6aa58;
+}
+.dark-theme .publications-inner .project.project-highlight {
+    border-color: #4b4232;
+    background-color: #28251f;
+    box-shadow: inset 3px 0 #b68b42;
+}
+@media (max-width: 575px) {
+    .publications-inner .project { padding: 16px 12px; }
+}
+
+/* Project thumbnail */
+.project-thumb {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: none;
+    background-color: var(--surface);
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+.project-thumb img,
+.project-thumb video {
+    width: 100%;
+    aspect-ratio: 16 / 9;   /* source gifs differ slightly; crop to one shape so rows align */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+.project:hover .project-thumb img,
+.project:hover .project-thumb video {
+    transform: scale(1.025);
+}
+/* Venue badge floating over the thumbnail's top-left corner */
+.project-media {
+    position: relative;
+}
+/* Stacked layout: a full-width thumbnail would dwarf the text, so cap it */
+@media (max-width: 575px) {
+    .project-media {
+        max-width: 340px;
+        margin-bottom: 0.75rem;
+    }
+}
+.project-venue-tag {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 9px;
+    border: 1px solid rgba(147, 197, 253, 0.8);
+    border-radius: 999px;
+    color: #1e40af;
+    background-color: rgba(239, 246, 255, 0.96);
+    font-size: 0.68rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.025em;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    pointer-events: none;
+}
+.project-venue-tag::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: currentColor;
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+.project-venue-tag.is-preprint {
+    color: #475569;
+    background-color: rgba(248, 250, 252, 0.96);
+    border-color: rgba(148, 163, 184, 0.55);
+}
+.dark-theme .project-venue-tag {
+    color: #bfdbfe;
+    background-color: rgba(15, 23, 42, 0.94);
+    border-color: rgba(96, 165, 250, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.dark-theme .project-venue-tag.is-preprint {
+    color: #cbd5e1;
+    background-color: rgba(30, 41, 59, 0.94);
+    border-color: rgba(148, 163, 184, 0.45);
+}
+
+/* Project text content */
+.project-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--heading);
+    line-height: 1.45;
+    margin-bottom: 2px;
+}
+.project-system-name {
+    color: var(--accent);
+    font-style: normal;
+}
+.project-venue {
+    font-size: 0.81rem;
+    font-style: normal;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+.project-venue a {
+    color: var(--text-muted);
+}
+.project-venue a:hover {
+    color: var(--accent);
+}
+.project-status {
+    display: inline-block;
+    font-style: normal;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #e74d3c;
+    border: 1px solid rgba(231, 77, 60, 0.45);
+    background-color: rgba(231, 77, 60, 0.08);
+    border-radius: 999px;
+    padding: 0px 8px;
+    margin-left: 4px;
+    vertical-align: 1px;
+}
+.project-authors {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+.project-authors u {
+    color: var(--text);
+    font-weight: 600;
+    text-underline-offset: 3px;
+}
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+.project-link {
+    /* flex + centre so the label and the star count share one axis instead of
+       sitting on the text baseline, which the icon throws off */
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.74rem;
+    font-weight: 500;
+    color: var(--accent);
+    background-color: var(--accent-soft);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 3px 9px;
+    transition: background-color 0.2s, color 0.2s;
+}
+.project-link:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+    text-decoration: none;
+}
+/* GitHub star count appended to the code link (filled in by scripts.js) */
+.repo-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 7px;
+    padding-left: 7px;
+    border-left: 1px solid currentColor;
+    line-height: 1;
+    opacity: 0.8;
+}
+.repo-stars-mark {
+    width: 0.95em;
+    height: 0.95em;
+    fill: currentColor;
+}
+.repo-stars-count {
+    /* nudge: the star glyph and the digits centre a hair above the icon */
+    line-height: 1;
+}
+.dark-theme .project-link:hover {
+    color: #0f172a;
+}
+.project-tldr {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+.project-tldr-label {
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Responsive adjustments */
+@media (max-width: 575px) {
+    .project-thumb {
+        margin-bottom: 12px;
+    }
+}
+
+
+/* Styles for filter buttons */
+.publications-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 0.75rem;
+}
+.publications-note {
+    margin: 1rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+#filters-project .filter-button {
+    font-size: 0.76rem;
+    min-height: 32px;
+    padding: 5px 12px;
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background-color: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+}
+#filters-project .filter-button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background-color: var(--accent-soft);
+}
+#filters-project .filter-button.active {
+    background-color: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+}
+.dark-theme #filters-project .filter-button.active {
+    color: var(--accent);
+}
+
+
+/* News list: fixed height, scrolls with the mouse wheel */
+.news-list {
+    font-size: 0.93rem;
+    max-height: 16rem;   /* ~8 items visible; the rest scroll */
+    overflow-y: auto;
+    padding-right: 12px;
+    scrollbar-width: thin;
+}
+/* Only when the list actually overflows (class set in scripts.js): fade the
+   bottom line out so a half-visible item reads as "scroll for more" */
+.news-list.is-scrollable {
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 26px), transparent);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 26px), transparent);
+}
+.news-list::-webkit-scrollbar {
+    width: 6px;
+}
+/* Items wrap to two lines on phones, so the cap would slice one in half */
+@media (max-width: 767px) {
+    .news-list {
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+}
+.news-list-item {
+    display: flex;
+    align-items: baseline;
+    line-height: 1.55;
+}
+.news-list-date {
+    font-size: 0.76rem;
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 0;
+    min-width: 4.2rem;
+    margin-right: 1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: 0.25s;
+}
+.news-list-item:hover .news-list-date {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+.news-list-text {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+/* Footer sits a little further from the last section, then closes the page */
+.footer-rule {
+    margin-top: 2rem;
+}
+.site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding-bottom: 2rem;
+    font-size: 0.76rem;
+}
+.site-footer p { margin: 0; }
+footer a {
+    color: var(--text-muted);
+}
+footer a:hover {
+    color: var(--accent);
+}
+/* Education: compact school cards. */
+.affiliation-board {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+.affiliation-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--surface);
+    transition: background-color 0.4s, border-color 0.4s;
+}
+.affiliation-mark {
+    flex: 0 0 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    background-color: #ffffff;   /* keep logos on white in both themes */
+    overflow: hidden;
+}
+.affiliation-mark img {
+    max-height: 82%;
+    max-width: 82%;
+    object-fit: contain;
+}
+.affiliation-year {
+    margin-top: 3px;
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-muted);
+}
+.affiliation-title {
+    font-weight: 500;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 3px;
+}
+.affiliation-org {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--heading);
+    line-height: 1.45;
+}
+.affiliation-copy { min-width: 0; }
+@media (max-width: 767px) {
+    .affiliation-board { grid-template-columns: 1fr; }
+    .affiliation-card { padding: 16px; }
+}
+@media (max-width: 575px) {
+    #filters-project .filter-button { min-height: 36px; }
+}
+
+
+/* Back-to-top button styles */
+#back-to-top-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent);
+    width: 46px;
+    height: 46px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s, transform .3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#back-to-top-button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.2em;
+    color: #fff;
+}
+.dark-theme #back-to-top-button::after {
+    color: #0f172a;
+}
+#back-to-top-button:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+#back-to-top-button.show {
+    opacity: 0.9;
+    visibility: visible;
+}
+
+
+/* Toggle theme button styles */
+.toggle-theme-button {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    user-select: none;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: background-color 0.4s, border-color 0.4s, transform 0.3s;
+}
+.toggle-theme-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Styles for progress bar */
+.progress-bar-container {
+    width: 100%;
+    height: 3px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+}
+.progress-bar {
+    height: 3px;
+    background: var(--accent-gradient);
+    border-radius: 0 3px 3px 0;
+    width: 0%;
+}
+
+
+/* New style for webpage scrollbar */
+::-webkit-scrollbar {
+    width: 9px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #c3ccd9;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+}
+.dark-theme ::-webkit-scrollbar-thumb {
+    background-color: #334155;
+}
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+    background-color: #475569;
+}
+
+
+/* Styles for middle-layer moving-particle canvas */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+.dark-theme canvas {
+    opacity: 0.12;
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    canvas { display: none; }
+    .project-thumb img,
+    .project-thumb video,
+    .social-link { transition: none; }
+}

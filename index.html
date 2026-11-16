@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <!-- Metadata -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="Jinrui Han — humanoid robotics, whole-body control, and loco-manipulation."/>
+        <meta name="author" content="Jinrui Han"/>
+        <title>Jinrui</title>
+        <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="assets/img/favicon.ico?v=20261116-github-cat-transparent"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=20261116-github-cat-transparent"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png?v=20261116-github-cat-transparent"/>
+
+        <!-- Font Awesome icons -->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+
+        <!-- Layout and icon styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Core theme CSS -->
+        <link rel="preload" href="assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin/>
+        <link href="styles/styles.css?v=20261116m" rel="stylesheet"/>
+
+    </head>
+
+    <body>
+
+        <!-- Moving particles -->
+        <canvas id="canvas"></canvas>
+
+        <!-- Progress bar on top -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Back to top button -->
+        <a id="back-to-top-button" href="#" aria-label="Back to top"></a>
+
+        <!-- Dark/light theme toggle button -->
+        <button type="button" class="toggle-theme-button" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle color theme">🌙</button>
+
+        <!-- Content -->
+        <div class="container site-container">
+            <!-- About section -->
+
+<div class="row mb-4 about-row">
+    <div class="col-xl-2 col-lg-3 col-md-4 about-photo">
+        <div class="ring-container">
+            <img class="profile-image" src="assets/img/jinrui-scholar.jpg" alt="Jinrui Han">
+        </div>
+    </div>
+
+    <div class="col-xl-10 col-lg-9 col-md-8 about-bio">
+        <h2 class="profile-name">
+            Jinrui Han<span class="name-cn">韩金睿</span>
+        </h2>
+
+        <!-- Social links: labeled pills right under the name -->
+        <div class="social-links">
+            <a class="social-link link-email" href="mailto:jinrui.han@connect.hku.hk"><i class="fa fa-envelope"></i><span>Email</span></a>
+            <a class="social-link link-github" href="https://github.com/bwrooney82" target="_blank" rel="noopener"><i class="fab fa-github"></i><span>GitHub</span></a>
+            <a class="social-link link-scholar" href="https://scholar.google.com.pr/citations?user=mJ7tn3MAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fa fa-graduation-cap"></i><span>Scholar</span></a>
+            <a class="social-link link-wechat has-qr" href="assets/img/wechat.png" target="_blank" rel="noopener"><i class="fab fa-weixin"></i><span>WeChat</span><span class="qr-pop"><img src="assets/img/wechat.png" alt="WeChat QR code" loading="lazy"></span></a>
+            <a class="social-link link-x" href="https://x.com/intent/follow?screen_name=jinrui82" target="_blank" rel="noopener" aria-label="Follow @jinrui82 on X"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>Follow on X</span></a>
+        </div>
+
+        <div class="about-description">
+            <p>Hi everyone! I am a first-year PhD student at <a href="https://mmlab.hk/" target="_blank" rel="noopener">MMLab@HKU</a> (The University of Hong Kong), advised by <a href="http://luoping.me/" target="_blank" rel="noopener">Prof. Ping Luo</a>.  I also work closely with <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Dr. Chenjia Bai</a>. My research focuses on humanoid robot whole-body control, learning and systems.</p>
+            <p>Previously, I received my M.Eng. & B.Eng. degrees from <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">SJTU</a> (Shanghai Jiao Tong University).</p>
+            <p class="about-contact">Feel free to reach out via <a href="mailto:jinrui.han@connect.hku.hk">email</a> or <a href="assets/img/wechat.png">WeChat</a> for discussions or collaborations.</p>
+        </div>
+    </div>
+</div>
+
+            <!-- News section -->
+
+<hr>
+<div class="row" id="news">
+    <div class="col">
+        <h2 class="mb-3 section-heading">News</h2>
+        <ul class="list-unstyled news-list mb-0">
+
+            <li class="news-list-item mb-2"><span class="news-list-date">2026-10</span> <span class="news-list-text">Release <a href='https://locomanilab.github.io/' target='_blank' rel='noopener'>LocoManiLab</a>, <a href='https://nexus-humanoid.github.io/' target='_blank' rel='noopener'>NEXUS</a>, and <a href='https://lu-yidan.github.io/ROOF/' target='_blank' rel='noopener'>ROOF</a>.</span></li>
+
+            <li class="news-list-item mb-2"><span class="news-list-date">2026-04</span> <span class="news-list-text"><a href='https://husky-humanoid.github.io/' target='_blank' rel='noopener'>HUSKY</a> is accepted by <b>RSS 2026</b>.</span></li>
+
+            <li class="news-list-item mb-2"><span class="news-list-date">2026-03</span> <span class="news-list-text">Invited talk at <a href='https://mp.weixin.qq.com/s/Oz0o2Zp_e2PTCSqnLqHLWg?poc_token=HNfOvGmjNbFC6GgZT1t7mCsOLmLIoTxCtDDiF2aW' target='_blank' rel='noopener'>具身智能之心.</a></span></li>
+
+            <li class="news-list-item mb-2"><span class="news-list-date">2026-02</span> <span class="news-list-text">Release <a href='https://husky-humanoid.github.io/' target='_blank' rel='noopener'>HUSKY</a>, <a href='https://text-op.github.io/' target='_blank' rel='noopener'>TextOp</a>, and <a href='https://soccer-humanoid.github.io/' target='_blank' rel='noopener'>HumanoidSoccer</a>.</span></li>
+
+            <li class="news-list-item mb-2"><span class="news-list-date">2026-01</span> <span class="news-list-text"><a href='https://kungfubot2-humanoid.github.io/' target='_blank' rel='noopener'>KungfuBot2</a> is accepted by <b>ICRA 2026</b>.</span></li>
+
+            <li class="news-list-item mb-2"><span class="news-list-date">2025-10</span> <span class="news-list-text">Release <a href='https://kungfubot2-humanoid.github.io/' target='_blank' rel='noopener'>KungfuBot2</a>.</span></li>
+
+            <li class="news-list-item mb-2"><span class="news-list-date">2025-09</span> <span class="news-list-text"><a href='https://kungfubot.github.io/' target='_blank' rel='noopener'>KungfuBot</a> is accepted by <b>NeurIPS 2025</b>.</span></li>
+
+            <li class="news-list-item mb-2"><span class="news-list-date">2025-06</span> <span class="news-list-text">Invited talk at <a href='https://www.shenlanxueyuan.com/open/course/286' target='_blank' rel='noopener'>深蓝学院</a> and <a href='https://www.openrobot.me/talk' target='_blank' rel='noopener'>OpenGRO.</a></span></li>
+
+            <li class="news-list-item mb-2"><span class="news-list-date">2025-06</span> <span class="news-list-text">Release <a href='https://kungfubot.github.io/' target='_blank' rel='noopener'>KungfuBot</a>.</span></li>
+
+        </ul>
+    </div>
+</div>
+
+            <!-- Research section -->
+
+<hr>
+<div class="row" id="research">
+    <div class="col">
+        <h2 class="mb-3 publications-heading">Projects</h2>
+        <div id="filters-project" class="publications-filters">
+            <button class="filter-button active" data-filter="*">all</button>
+
+                <button class="filter-button" data-filter="Humanoid WBC">Humanoid WBC</button>
+
+                <button class="filter-button" data-filter="Humanoid for Sports">Humanoid for Sports</button>
+
+                <button class="filter-button" data-filter="Whole Body Loco-Manipulation">Whole Body Loco-Manipulation</button>
+
+        </div>
+        <div id="projects" class="isotope publications-inner">
+
+                <div class="project" data-filter="Humanoid WBC">
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-media">
+                <span class="project-venue-tag is-preprint">Preprint</span>
+                <div class="project-thumb">
+
+                    <img src="assets/img/roof.webp" alt="Learning Humanoid Fall Recovery under Overhead Constraints">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                <span class="project-system-name">ROOF</span>: Learning Humanoid Fall Recovery under Overhead Constraints
+            </div>
+            <div class="project-venue">
+                Preprint
+
+            </div>
+            <div class="project-authors">Yidan Lu, Jiayuan Yu, Zongrui Cai, Jingwen Sun, <u>Jinrui Han</u>, Jing Wang, Ping Luo, Peng Lu†</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2610.42097" target="_blank" rel="noopener">arXiv</a>
+
+                <a class="project-link" href="https://lu-yidan.github.io/ROOF/" target="_blank" rel="noopener">project</a>
+
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A proprioceptive reinforcement learning policy that creates clearance and coordinates whole-body support to recover from falls beneath overhead obstacles.</div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="project project-highlight" data-filter="Whole Body Loco-Manipulation">
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-media">
+                <span class="project-venue-tag is-preprint">Preprint</span>
+                <div class="project-thumb">
+
+                    <video autoplay muted loop playsinline preload="metadata" poster="assets/img/locomanilab.webp" aria-label="LocoManiLab demonstration">
+                        <source src="assets/video/locomanilab.mp4" type="video/mp4">
+                        <img src="assets/img/locomanilab.webp" alt="A Unified Testbed for Data, Policies, Controllers, and Deployment in Humanoid Loco-Manipulation">
+                    </video>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                <span class="project-system-name">LocoManiLab</span>: A Unified Testbed for Data, Policies, Controllers, and Deployment in Humanoid Loco-Manipulation
+            </div>
+            <div class="project-venue">
+                Preprint
+
+            </div>
+            <div class="project-authors">Dewei Wang*§, <u>Jinrui Han*§</u>, Jiyuan Shi*, Chenyun Zhang, Xianbo Lu, Jiabao Wu, Jiqin Feng, Jipeng Kong, Xinzhe Liu, Ping Luo, Yuchen Xiao, Xingxing Wang, Chenjia Bai†, Xuelong Li†</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2610.30876" target="_blank" rel="noopener">arXiv</a>
+                <a class="project-link" href="https://github.com/Gamma-Robot/LocoManiLab" target="_blank" rel="noopener">code</a>
+                <a class="project-link" href="https://locomanilab.github.io/" target="_blank" rel="noopener">project</a>
+
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A unified testbed for humanoid loco-manipulation across 234 household tasks, integrating data collection, policy learning, whole-body control, and simulation-to-real evaluation.</div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="project" data-filter="Humanoid WBC">
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-media">
+                <span class="project-venue-tag is-preprint">Preprint</span>
+                <div class="project-thumb">
+
+                    <img src="assets/img/nexus.webp" alt="Perceptive Whole-Body Control for Terrain-Adaptive Teleoperation">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                <span class="project-system-name">NEXUS</span>: Perceptive Whole-Body Control for Terrain-Adaptive Teleoperation
+            </div>
+            <div class="project-venue">
+                Preprint
+
+            </div>
+            <div class="project-authors">Xiangyu Miao, Junsong Wu, Jiyuan Shi, Weiji Xie, <u>Jinrui Han</u>, Xingyi Wang, Weinan Zhang†, Chenjia Bai†, Xuelong Li</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2609.39000" target="_blank" rel="noopener">arXiv</a>
+                <a class="project-link" href="https://github.com/Gamma-Robot/NEXUS" target="_blank" rel="noopener">code</a>
+                <a class="project-link" href="https://nexus-humanoid.github.io/" target="_blank" rel="noopener">project</a>
+
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A perceptive whole-body controller combines human motion commands with onboard depth sensing to enable real-time humanoid teleoperation across unseen terrains.</div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="project project-highlight" data-filter="Humanoid for Sports">
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-media">
+                <span class="project-venue-tag">RSS 2026</span>
+                <div class="project-thumb">
+
+                    <img src="assets/img/husky.gif" alt="Humanoid Skateboarding System via Physics-Aware Whole-Body Control">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                <span class="project-system-name">HUSKY</span>: Humanoid Skateboarding System via Physics-Aware Whole-Body Control
+            </div>
+            <div class="project-venue">
+                <a href="https://roboticsconference.org/program/papersession/?session=Humanoids" target="_blank" rel="noopener"><b>Robotics: Science and Systems (RSS), 2026 (Oral Presentation)</b></a>
+
+            </div>
+            <div class="project-authors"><u>Jinrui Han*</u>, Dewei Wang*, Chenyun Zhang, Xinzhe Liu, Ping Luo, Chenjia Bai†, Xuelong Li†</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2602.03205" target="_blank" rel="noopener">arXiv</a>
+                <a class="project-link" href="https://github.com/TeleHuman/humanoid_skateboarding" target="_blank" rel="noopener">code</a>
+                <a class="project-link" href="https://husky-humanoid.github.io/" target="_blank" rel="noopener">project</a>
+
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A reinforcement learning–based whole-body control framework for stable and agile humanoid skateboarding.</div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="project" data-filter="Humanoid WBC">
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-media">
+                <span class="project-venue-tag">CoRL 2026</span>
+                <div class="project-thumb">
+
+                    <img src="assets/img/textop.gif" alt="Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                <span class="project-system-name">TextOp</span>: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control
+            </div>
+            <div class="project-venue">
+                <a href="https://www.corl.org/" target="_blank" rel="noopener"><b>The Conference on Robot Learning (CoRL), 2026</b></a>
+
+            </div>
+            <div class="project-authors">Weiji Xie*, Jiakun Zheng*, <u>Jinrui Han</u>, Jiyuan Shi, Weinan Zhang†, Chenjia Bai†, Xuelong Li</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2602.07439" target="_blank" rel="noopener">arXiv</a>
+                <a class="project-link" href="https://github.com/TeleHuman/TextOp" target="_blank" rel="noopener">code</a>
+                <a class="project-link" href="https://text-op.github.io/" target="_blank" rel="noopener">project</a>
+
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A real-time interactive text-driven framework for humanoid motion generation and control that supports streaming language commands.</div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="project" data-filter="Humanoid for Sports">
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-media">
+                <span class="project-venue-tag is-preprint">Preprint</span>
+                <div class="project-thumb">
+
+                    <img src="assets/img/soccer.gif" alt="Learning Soccer Skills for Humanoid Robots A Progressive Perception-Action Framework">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                Learning Soccer Skills for Humanoid Robots A Progressive Perception-Action Framework
+            </div>
+            <div class="project-venue">
+                Preprint
+
+            </div>
+            <div class="project-authors">Jipeng Kong*, Xinzhe Liu*, Yuhang Lin, <u>Jinrui Han</u>, Sören Schwertfeger, Chenjia Bai†, Xuelong Li†</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2602.05310" target="_blank" rel="noopener">arXiv</a>
+                <a class="project-link" href="https://github.com/TeleHuman/HumanoidSoccer" target="_blank" rel="noopener">code</a>
+                <a class="project-link" href="https://soccer-humanoid.github.io/" target="_blank" rel="noopener">project</a>
+
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A progressive perception–action framework enabling robust, human-like soccer kicking on humanoid robots.</div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="project project-highlight" data-filter="Humanoid WBC">
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-media">
+                <span class="project-venue-tag">ICRA 2026</span>
+                <div class="project-thumb">
+
+                    <img src="assets/img/kungfubot2.gif" alt="Learning Versatile Motion Skills for Humanoid Whole-Body Control">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                <span class="project-system-name">KungfuBot2</span>: Learning Versatile Motion Skills for Humanoid Whole-Body Control
+            </div>
+            <div class="project-venue">
+                <a href="https://2026.ieee-icra.org/" target="_blank" rel="noopener"><b>International Conference on Robotics and Automation (ICRA), 2026</b></a>
+
+            </div>
+            <div class="project-authors"><u>Jinrui Han</u>, Weiji Xie, Jiakun Zheng, Jiyuan Shi, Weinan Zhang, Ting Xiao, Chenjia Bai†</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2509.16638" target="_blank" rel="noopener">arXiv</a>
+                <a class="project-link" href="https://github.com/TeleHuman/PBHC" target="_blank" rel="noopener">code</a>
+                <a class="project-link" href="https://kungfubot2-humanoid.github.io/" target="_blank" rel="noopener">project</a>
+
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A unified whole-body controller that enables humanoid robots to learn diverse and dynamic behaviors within a single policy.</div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="project project-highlight" data-filter="Humanoid WBC">
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <div class="project-media">
+                <span class="project-venue-tag">NeurIPS 2025</span>
+                <div class="project-thumb">
+
+                    <img src="assets/img/kungfubot.gif" alt="Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="project-title">
+                <span class="project-system-name">KungfuBot</span>: Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills
+            </div>
+            <div class="project-venue">
+                <a href="https://neurips.cc/" target="_blank" rel="noopener"><b>Advances in Neural Information Processing Systems (NeurIPS), 2025</b></a>
+
+            </div>
+            <div class="project-authors">Weiji Xie*, <u>Jinrui Han*</u>, Jiakun Zheng*, Huanyu Li, Xinzhe Liu, Jiyuan Shi, Weinan Zhang, Chenjia Bai†, Xuelong Li†.</div>
+            <div class="project-links">
+                <a class="project-link" href="https://arxiv.org/abs/2506.12851" target="_blank" rel="noopener">arXiv</a>
+                <a class="project-link" href="https://github.com/TeleHuman/PBHC" target="_blank" rel="noopener">code</a>
+                <a class="project-link" href="https://kungfubot.github.io/" target="_blank" rel="noopener">project</a>
+                <a class="project-link" href="https://www.openrobot.me/talk" target="_blank" rel="noopener">talk</a>
+            </div>
+            <div class="project-tldr"><span class="project-tldr-label">TL;DR</span> — A physics-based humanoid control framework, aiming to master highly-dynamic human behaviors such as Kungfu and dancing.</div>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+        <p class="publications-note">* Equal contribution · § Co-project leaders · † Corresponding authors</p>
+    </div>
+</div>
+
+            <!-- Education section -->
+
+<hr>
+<div class="row" id="affiliations">
+    <div class="col">
+        <h2 class="mb-3 section-heading">Education</h2>
+        <div class="affiliation-board">
+
+            <div class="affiliation-card">
+                <div class="affiliation-mark">
+                    <img src="assets/img/hku.jpg" alt="The University of Hong Kong" loading="lazy">
+                </div>
+                <div class="affiliation-copy">
+                    <div class="affiliation-org">The University of Hong Kong</div>
+                    <div class="affiliation-title">Ph.D. Student</div>
+                    <div class="affiliation-year">2026.09 - Now</div>
+                </div>
+            </div>
+
+            <div class="affiliation-card">
+                <div class="affiliation-mark">
+                    <img src="assets/img/sjtu.png" alt="Shanghai Jiao Tong University" loading="lazy">
+                </div>
+                <div class="affiliation-copy">
+                    <div class="affiliation-org">Shanghai Jiao Tong University</div>
+                    <div class="affiliation-title">B.Eng. & M.Eng.</div>
+                    <div class="affiliation-year">2019 - 2026</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+            <!-- Footer section -->
+
+<hr class="footer-rule">
+<footer class="site-footer">
+    <p>© Jinrui Han 2026</p>
+</footer>
+
+        </div>
+
+        <!-- Project filtering -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.2/dist/isotope.pkgd.min.js"></script>
+
+        <!-- Site interactions -->
+        <script src="js/scripts.js?v=20261116c"></script>
+
+    </body>
+</html>

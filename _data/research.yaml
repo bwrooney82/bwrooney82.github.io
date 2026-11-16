@@ -1,0 +1,135 @@
+categories:
+
+  - data-filter: Humanoid WBC
+    category-name: Humanoid WBC
+
+  - data-filter: Humanoid for Sports
+    category-name: Humanoid for Sports
+
+  - data-filter: Whole Body Loco-Manipulation
+    category-name: Whole Body Loco-Manipulation
+
+
+projects:
+
+  - title: Learning Humanoid Fall Recovery under Overhead Constraints
+    system-name: ROOF
+    # Animation source: https://lu-yidan.github.io/ROOF/assets/videos/table-recovery-stall4x.mp4 (ROOF authors, CC BY-SA 4.0)
+    gif: assets/img/roof.webp
+    venue-tag: Preprint
+    conference: Preprint
+    conference-web:
+    status:
+    authors: Yidan Lu, Jiayuan Yu, Zongrui Cai, Jingwen Sun, <u>Jinrui Han</u>, Jing Wang, Ping Luo, Peng Lu†
+    arxiv: https://arxiv.org/abs/2610.42097
+    code:
+    project: https://lu-yidan.github.io/ROOF/
+    TLDR: A proprioceptive reinforcement learning policy that creates clearance and coordinates whole-body support to recover from falls beneath overhead obstacles.
+    category: Humanoid WBC
+
+  - title: A Unified Testbed for Data, Policies, Controllers, and Deployment in Humanoid Loco-Manipulation
+    system-name: LocoManiLab
+    author-role: Co-first author
+    # Video source: https://locomanilab.github.io/media/hero-wall/benchmark-wall.mp4?v=7da7e63214e0
+    video: assets/video/locomanilab.mp4
+    gif: assets/img/locomanilab.webp
+    venue-tag: Preprint
+    conference: Preprint
+    conference-web:
+    status:
+    authors: Dewei Wang*§, <u>Jinrui Han*§</u>, Jiyuan Shi*, Chenyun Zhang, Xianbo Lu, Jiabao Wu, Jiqin Feng, Jipeng Kong, Xinzhe Liu, Ping Luo, Yuchen Xiao, Xingxing Wang, Chenjia Bai†, Xuelong Li†
+    arxiv: https://arxiv.org/abs/2610.30876
+    code: https://github.com/Gamma-Robot/LocoManiLab
+    project: https://locomanilab.github.io/
+    TLDR: A unified testbed for humanoid loco-manipulation across 234 household tasks, integrating data collection, policy learning, whole-body control, and simulation-to-real evaluation.
+    category: Whole Body Loco-Manipulation
+
+  - title: Perceptive Whole-Body Control for Terrain-Adaptive Teleoperation
+    system-name: NEXUS
+    # Animation source: https://nexus-humanoid.github.io/static/videos/gallery/jogging-stairs.mp4 (NEXUS authors)
+    gif: assets/img/nexus.webp
+    venue-tag: Preprint
+    conference: Preprint
+    conference-web:
+    status:
+    authors: Xiangyu Miao, Junsong Wu, Jiyuan Shi, Weiji Xie, <u>Jinrui Han</u>, Xingyi Wang, Weinan Zhang†, Chenjia Bai†, Xuelong Li
+    arxiv: https://arxiv.org/abs/2609.39000
+    code: https://github.com/Gamma-Robot/NEXUS
+    project: https://nexus-humanoid.github.io/
+    TLDR: A perceptive whole-body controller combines human motion commands with onboard depth sensing to enable real-time humanoid teleoperation across unseen terrains.
+    category: Humanoid WBC
+
+  - title: Humanoid Skateboarding System via Physics-Aware Whole-Body Control
+    system-name: HUSKY
+    author-role: Co-first author
+    gif: assets/img/husky.gif
+    venue-tag: RSS 2026
+    conference: "<b>Robotics: Science and Systems (RSS), 2026 (Oral Presentation)</b>"
+    conference-web: https://roboticsconference.org/program/papersession/?session=Humanoids
+    status:
+    authors: <u>Jinrui Han*</u>, Dewei Wang*, Chenyun Zhang, Xinzhe Liu, Ping Luo, Chenjia Bai†, Xuelong Li†
+    arxiv: https://arxiv.org/abs/2602.03205
+    code: https://github.com/TeleHuman/humanoid_skateboarding
+    project: https://husky-humanoid.github.io/
+    TLDR: A reinforcement learning–based whole-body control framework for stable and agile humanoid skateboarding.
+    category: Humanoid for Sports
+
+  - title: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control
+    system-name: TextOp
+    gif: assets/img/textop.gif
+    venue-tag: CoRL 2026
+    conference: "<b>The Conference on Robot Learning (CoRL), 2026</b>"
+    conference-web: https://www.corl.org/
+    status:
+    authors: Weiji Xie*, Jiakun Zheng*, <u>Jinrui Han</u>, Jiyuan Shi, Weinan Zhang†, Chenjia Bai†, Xuelong Li
+    arxiv: https://arxiv.org/abs/2602.07439
+    code: https://github.com/TeleHuman/TextOp
+    project: https://text-op.github.io/
+    TLDR: A real-time interactive text-driven framework for humanoid motion generation and control that supports streaming language commands.
+    category: Humanoid WBC
+
+  - title: Learning Soccer Skills for Humanoid Robots A Progressive Perception-Action Framework
+    system-name:
+    gif: assets/img/soccer.gif
+    venue-tag: Preprint
+    conference: Preprint
+    conference-web:
+    status:
+    authors: Jipeng Kong*, Xinzhe Liu*, Yuhang Lin, <u>Jinrui Han</u>, Sören Schwertfeger, Chenjia Bai†, Xuelong Li†
+    arxiv: https://arxiv.org/abs/2602.05310
+    code: https://github.com/TeleHuman/HumanoidSoccer
+    project: https://soccer-humanoid.github.io/
+    TLDR: A progressive perception–action framework enabling robust, human-like soccer kicking on humanoid robots.
+    category: Humanoid for Sports
+
+
+  - title: Learning Versatile Motion Skills for Humanoid Whole-Body Control
+    system-name: KungfuBot2
+    author-role: First author
+    gif: assets/img/kungfubot2.gif
+    venue-tag: ICRA 2026
+    conference: <b>International Conference on Robotics and Automation (ICRA), 2026</b>
+    conference-web: https://2026.ieee-icra.org/
+    status:
+    authors: <u>Jinrui Han</u>, Weiji Xie, Jiakun Zheng, Jiyuan Shi, Weinan Zhang, Ting Xiao, Chenjia Bai†
+    arxiv: https://arxiv.org/abs/2509.16638
+    code: https://github.com/TeleHuman/PBHC
+    project: https://kungfubot2-humanoid.github.io/
+    TLDR: A unified whole-body controller that enables humanoid robots to learn diverse and dynamic behaviors within a single policy.
+    category: Humanoid WBC
+
+  - title: Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills
+    system-name: KungfuBot
+    author-role: Co-first author
+    gif: assets/img/kungfubot.gif
+    venue-tag: NeurIPS 2025
+    conference: <b>Advances in Neural Information Processing Systems (NeurIPS), 2025</b>
+    conference-web: https://neurips.cc/
+    status:
+    authors: Weiji Xie*, <u>Jinrui Han*</u>, Jiakun Zheng*, Huanyu Li, Xinzhe Liu, Jiyuan Shi, Weinan Zhang, Chenjia Bai†, Xuelong Li†.
+    arxiv: https://arxiv.org/abs/2506.12851
+    code: https://github.com/TeleHuman/PBHC
+    project: https://kungfubot.github.io/
+    talk: https://www.openrobot.me/talk
+    TLDR: A physics-based humanoid control framework, aiming to master highly-dynamic human behaviors such as Kungfu and dancing.
+    category: Humanoid WBC

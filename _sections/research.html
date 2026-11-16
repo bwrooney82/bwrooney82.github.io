@@ -1,0 +1,20 @@
+<!-- Research section -->
+
+<hr>
+<div class="row" id="research">
+    <div class="col">
+        <h2 class="mb-3 publications-heading">Projects</h2>
+        <div id="filters-project" class="publications-filters">
+            <button class="filter-button active" data-filter="*">all</button>
+            {% for category in data.research.categories %}
+                <button class="filter-button" data-filter="{{ category.data_filter }}">{{ category.category_name }}</button>
+            {% endfor %}
+        </div>
+        <div id="projects" class="isotope publications-inner">
+            {% for project in data.research.projects %}
+                {% include "_libs/research_widget.html" %}
+            {% endfor %}
+        </div>
+        <p class="publications-note">* Equal contribution · § Co-project leaders · † Corresponding authors</p>
+    </div>
+</div>

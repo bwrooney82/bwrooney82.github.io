@@ -1,0 +1,21 @@
+# basic information
+name: Jinrui Han
+name-cn: 韩金睿
+# Source: https://scholar.google.com/citations?view_op=medium_photo&user=mJ7tn3MAAAAJ&citpid=2
+profile-pic: assets/img/jinrui-scholar.jpg
+
+# social links
+email: jinrui.han@connect.hku.hk
+scholar: https://scholar.google.com.pr/citations?user=mJ7tn3MAAAAJ&hl=en
+github: https://github.com/bwrooney82
+twitter: https://x.com/intent/follow?screen_name=jinrui82
+wechat: assets/img/wechat.png
+
+# about me
+first-paragraph: Hi everyone! I am a first-year PhD student at <a href="https://mmlab.hk/" target="_blank" rel="noopener">MMLab@HKU</a> (The University of Hong Kong), advised by <a href="http://luoping.me/" target="_blank" rel="noopener">Prof. Ping Luo</a>.  I also work closely with <a href="https://baichenjia.github.io/" target="_blank" rel="noopener">Dr. Chenjia Bai</a>. My research focuses on humanoid robot whole-body control, learning and systems.
+
+second-paragraph: Previously, I received my M.Eng. & B.Eng. degrees from <a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">SJTU</a> (Shanghai Jiao Tong University).
+
+third-paragraph: Feel free to reach out via <a href="mailto:jinrui.han@connect.hku.hk">email</a> or <a href="assets/img/wechat.png">WeChat</a> for discussions or collaborations.
+
+

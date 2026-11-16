@@ -1,0 +1,13 @@
+<!-- News section -->
+
+<hr>
+<div class="row" id="news">
+    <div class="col">
+        <h2 class="mb-3 section-heading">News</h2>
+        <ul class="list-unstyled news-list mb-0">
+            {% for item in data.news.items %}
+            <li class="news-list-item mb-2"><span class="news-list-date">{{ item.date }}</span> <span class="news-list-text">{{ item.text }}</span></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

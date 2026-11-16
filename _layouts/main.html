@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <!-- Metadata -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="Jinrui Han — humanoid robotics, whole-body control, and loco-manipulation."/>
+        <meta name="author" content="{{ data.about.name }}"/>
+        <title>{{ site.title }}</title>
+        <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="assets/img/favicon.ico?v=20261116-github-cat-transparent"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.icon_pic }}?v=20261116-github-cat-transparent"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png?v=20261116-github-cat-transparent"/>
+
+        <!-- Font Awesome icons -->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+
+        <!-- Layout and icon styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Core theme CSS -->
+        <link rel="preload" href="assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin/>
+        <link href="styles/styles.css?v=20261116m" rel="stylesheet"/>
+
+    </head>
+
+    <body>
+
+        <!-- Moving particles -->
+        <canvas id="canvas"></canvas>
+
+        <!-- Progress bar on top -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Back to top button -->
+        <a id="back-to-top-button" href="#" aria-label="Back to top"></a>
+
+        <!-- Dark/light theme toggle button -->
+        <button type="button" class="toggle-theme-button" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle color theme">🌙</button>
+
+        <!-- Content -->
+        <div class="container site-container">
+            {% include "_sections/about.html" %}
+            {% include "_sections/news.html" %}
+            {% include "_sections/research.html" %}
+            {% include "_sections/affiliations.html" %}
+            {% include "_sections/footer.html" %}
+        </div>
+
+        <!-- Project filtering -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.2/dist/isotope.pkgd.min.js"></script>
+
+        <!-- Site interactions -->
+        <script src="js/scripts.js?v=20261116c"></script>
+
+    </body>
+</html>

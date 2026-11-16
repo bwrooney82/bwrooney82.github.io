@@ -1,0 +1,15 @@
+# Education cards shown below the About section.
+# Each item: logo, year, title, org, note (optional, HTML ok).
+items:
+
+  - logo: assets/img/hku.jpg
+    year: "2026.09 - Now"
+    title: Ph.D. Student
+    org: The University of Hong Kong
+    note:
+
+  - logo: assets/img/sjtu.png
+    year: "2019 - 2026"
+    title: B.Eng. & M.Eng.
+    org: Shanghai Jiao Tong University
+    note:
