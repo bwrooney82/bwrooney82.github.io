@@ -27,6 +27,21 @@ projects:
     TLDR: A proprioceptive reinforcement learning policy that creates clearance and coordinates whole-body support to recover from falls beneath overhead obstacles.
     category: Humanoid WBC
 
+  - title: Closed-Loop Planning and Control for Cooperative Humanoid Transportation
+    system-name: TwoGether
+    # Animation and publication details: https://jianuocao.github.io/ (TwoGether authors)
+    gif: https://jianuocao.github.io/images/TwoGether.gif
+    venue-tag: Preprint
+    conference: Preprint
+    conference-web:
+    status:
+    authors: Jianuo Cao, Chen Fang*, Tianyang Tang*, Xuerong Liu, Huayi Wang, <u>Jinrui Han</u>, Kaixuan Wang, Peng Lu, Ping Luo
+    arxiv:
+    code:
+    project:
+    TLDR: Closed-loop planning and control for cooperative transportation with humanoid robots.
+    category: Whole Body Loco-Manipulation
+
   - title: A Unified Testbed for Data, Policies, Controllers, and Deployment in Humanoid Loco-Manipulation
     system-name: LocoManiLab
     author-role: Co-first author
